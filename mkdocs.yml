@@ -1,6 +1,6 @@
-site_name: CoolLIFE Wiki
-site_url: https://github.com/coollife-project/wiki/
-repo_url: https://github.com/coollife-project/wiki/wiki
+site_name: Citywatts Wiki
+site_url: https://github.com/citiwatts/wiki/
+repo_url: https://github.com/citiwatts/wiki/wiki
 edit_uri_template: '{path_noext}/_edit'  # https://www.mkdocs.org/user-guide/configuration/#edit_uri_template
 hooks:
   - change_edit_url.py
@@ -16,18 +16,18 @@ extra:
   generator: false  # Hide "Made with Material for MkDocs"
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/coollife-project/
-    - icon: fontawesome/brands/x-twitter
-      link: https://x.com/CoolLIFE_EU
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/coollife_project/
+      link: https://github.com/citiwatts/
+#    - icon: fontawesome/brands/x-twitter
+#      link: https://x.com/CoolLIFE_EU
+#    - icon: fontawesome/brands/linkedin
+#      link: https://www.linkedin.com/company/coollife_project/
 theme:
   name: material
   font:
     text: Ubuntu
     code: Ubuntu Mono
-  favicon: https://raw.githubusercontent.com/coollife-project/.github/main/logo.png
-  logo: https://raw.githubusercontent.com/coollife-project/.github/main/logo.png
+#  favicon: https://raw.githubusercontent.com/coollife-project/.github/main/logo.png
+#  logo: https://raw.githubusercontent.com/coollife-project/.github/main/logo.png
   icon:
     repo: fontawesome/brands/github
     # edit: material/file-edit-outline
@@ -59,20 +59,20 @@ theme:
 
 nav:
   - "Wiki Introduction":
-    - welcome-page-introduction-to-the-coollife-project.md
+#    - welcome-page-introduction-to-the-coollife-project.md
     - how-to-edit-this-wiki.md
   - "Dataset":
     - methodology-of-data-collection-cross-checking.md
     - open-data-repository-any-sub-sections.md
   - "General Functionalities & Structure":
-    - the-coollife-knowledge-hub-any-subsections.md
-    - the-coollife-tool.md
+#    - the-coollife-knowledge-hub-any-subsections.md
+#    - the-coollife-tool.md
     - layers.md
     - select-a-region.md
     - retrieve-indicators-of-a-selected-area.md
     - access-to-calculation-modules.md
     - user-account-functionalities-layer-upload-export-etc.md
-  - "How To Use The CoolLIFE Tool (Guidelines)":
+#  - "How To Use The CoolLIFE Tool (Guidelines)":
     - use-cases-for-different-target-groups-see-user-stories-in-t53.md
     - guideline-to-perform-cooling-analyses-and-planning-comprehensive-assessments-necps-local-strategies.md
   - "Calculation Modules":
