@@ -1,1 +1,1 @@
-[CoolLIFE Project Wiki](https://coollife-project.github.io/wiki/)
+[Citiwatts Wiki](https://citiwatts.github.io/wiki/)
