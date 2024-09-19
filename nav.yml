@@ -1,18 +1,18 @@
 nav:
   - "Wiki Introduction":
-    - welcome-page-introduction-to-the-coollife-project.md
+    - welcome-page.md
   - "Dataset":
     - methodology-of-data-collection-cross-checking.md
     - open-data-repository-any-sub-sections.md
   - "General Functionalities & Structure":
-    - the-coollife-knowledge-hub-any-subsections.md
-    - the-coollife-tool.md
+    - the-citiwatts-knowledge-hub-any-subsections.md
+    - the-citiwatts-tool.md
     - layers.md
     - select-a-region.md
     - retrieve-indicators-of-a-selected-area.md
     - access-to-calculation-modules.md
     - user-account-functionalities-layer-upload-export-etc.md
-  - "How To Use The CoolLIFE Tool (Guidelines)":
+  - "How To Use The CitiWatts Tool (Guidelines)":
     - use-cases-for-different-target-groups-see-user-stories-in-t53.md
     - guideline-to-perform-cooling-analyses-and-planning-comprehensive-assessments-necps-local-strategies.md
   - "Calculation Modules":

@@ -26,8 +26,8 @@ theme:
   font:
     text: Ubuntu
     code: Ubuntu Mono
-#  favicon: https://raw.githubusercontent.com/coollife-project/.github/main/logo.png
-#  logo: https://raw.githubusercontent.com/coollife-project/.github/main/logo.png
+ favicon: https://raw.githubusercontent.com/citiwatts/wiki/refs/heads/main/assets/logo-mini.png
+ logo: https://raw.githubusercontent.com/citiwatts/wiki/refs/heads/main/assets/logo-mini.png
   icon:
     repo: fontawesome/brands/github
     # edit: material/file-edit-outline
