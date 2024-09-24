@@ -1,4 +1,4 @@
-site_name: Citywatts Wiki
+site_name: Citiwatts Wiki
 site_url: https://github.com/citiwatts/wiki/
 repo_url: https://github.com/citiwatts/wiki/wiki
 edit_uri_template: '{path_noext}/_edit'  # https://www.mkdocs.org/user-guide/configuration/#edit_uri_template
