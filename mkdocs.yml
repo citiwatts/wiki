@@ -76,27 +76,33 @@ nav:
     - methodology-of-data-collection.md
     - open-data-repository.md
   - Calculation Modules (CM):
-    - cm-1-heat-customized-heat-and-gross-floor-area-density-maps.md
-    - cm-1-heat-scale-heat-and-cool-density-maps.md
-    - cm-1-heat-demand-projection.md
-    - cm-1-heat-heat-load-profiles.md
-    - cm-1-heat-district-heating-potential-areas-user-defined-thresholds.md
-    - cm-1-heat-district-heating-potential-economic-assessment.md
-    - cm-1-heat-district-heating-potential-economic-assessment--with-temperature-levels.md
-    - cm-1-heat-district-heating-supply.md
-    - cm-1-heat-decentral-heating-supply.md
-    - cm-1-heat-scenario-assessment.md
-    - cm-2-cooling-district-cooling.md
-    - cm-3-energy-sources-solar-thermal-and-pv-potential.md
-    - cm-3-energy-sources-shallow-geothermal-potential.md
-    - cm-3-energy-sources-heat-source-potential.md
-    - cm-3-energy-sources-biomass-potential.md
-    - cm-3-energy-sources-wind-potential.md
-    - cm-3-energy-sources-excess-heat-transport-potential.md
-    - cm-4-industry-add-industry-plant.md
-    - cm-5-mobility-electric-vehicle-density.md
-    - cm-5-mobility-electric-vehicles-charging-needs.md
-    - cm-6-energy-system-energyplan.md
+    - CM-1 Heat:
+      - cm-1-heat-customized-heat-and-gross-floor-area-density-maps.md
+      - cm-1-heat-scale-heat-and-cool-density-maps.md
+      - cm-1-heat-demand-projection.md
+      - cm-1-heat-heat-load-profiles.md
+      - cm-1-heat-district-heating-potential-areas-user-defined-thresholds.md
+      - cm-1-heat-district-heating-potential-economic-assessment.md
+      - cm-1-heat-district-heating-potential-economic-assessment--with-temperature-levels.md
+      - cm-1-heat-district-heating-supply.md
+      - cm-1-heat-decentral-heating-supply.md
+      - cm-1-heat-scenario-assessment.md
+    - CM-2 Cooling:
+      - cm-2-cooling-district-cooling.md
+    - CM-3 Energy Sources:
+      - cm-3-energy-sources-solar-thermal-and-pv-potential.md
+      - cm-3-energy-sources-shallow-geothermal-potential.md
+      - cm-3-energy-sources-heat-source-potential.md
+      - cm-3-energy-sources-biomass-potential.md
+      - cm-3-energy-sources-wind-potential.md
+      - cm-3-energy-sources-excess-heat-transport-potential.md
+    - CM-4 Industry:
+      - cm-4-industry-add-industry-plant.md
+    - CM-5 Mobility:
+      - cm-5-mobility-electric-vehicle-density.md
+      - cm-5-mobility-electric-vehicles-charging-needs.md
+    - CM-6 Energy System:
+      - cm-6-energy-system-energyplan.md
   - Learning Center:
     - guideline-citiwatts-toolbox-on-local-level.md
     - guideline-heat-planning-toolchain.md
