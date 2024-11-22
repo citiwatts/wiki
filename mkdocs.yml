@@ -17,10 +17,6 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/citiwatts/
-#    - icon: fontawesome/brands/x-twitter
-#      link: https://x.com/CoolLIFE_EU
-#    - icon: fontawesome/brands/linkedin
-#      link: https://www.linkedin.com/company/coollife_project/
 theme:
   name: material
   font:
