@@ -72,33 +72,33 @@ nav:
     - methodology-of-data-collection.md
     - open-data-repository.md
   - Calculation Modules (CM):
-    - CM-1 Heat:
-      - cm-1-heat-customized-heat-and-gross-floor-area-density-maps.md
-      - cm-1-heat-scale-heat-and-cool-density-maps.md
-      - cm-1-heat-demand-projection.md
-      - cm-1-heat-heat-load-profiles.md
-      - cm-1-heat-district-heating-potential-areas-user-defined-thresholds.md
-      - cm-1-heat-district-heating-potential-economic-assessment.md
-      - cm-1-heat-district-heating-potential-economic-assessment--with-temperature-levels.md
-      - cm-1-heat-district-heating-supply.md
-      - cm-1-heat-decentral-heating-supply.md
-      - cm-1-heat-scenario-assessment.md
-    - CM-2 Cooling:
-      - cm-2-cooling-district-cooling.md
-    - CM-3 Energy Sources:
-      - cm-3-energy-sources-solar-thermal-and-pv-potential.md
-      - cm-3-energy-sources-shallow-geothermal-potential.md
-      - cm-3-energy-sources-heat-source-potential.md
-      - cm-3-energy-sources-biomass-potential.md
-      - cm-3-energy-sources-wind-potential.md
-      - cm-3-energy-sources-excess-heat-transport-potential.md
-    - CM-4 Industry:
-      - cm-4-industry-add-industry-plant.md
-    - CM-5 Mobility:
-      - cm-5-mobility-electric-vehicle-density.md
-      - cm-5-mobility-electric-vehicles-charging-needs.md
-    - CM-6 Energy System:
-      - cm-6-energy-system-energyplan.md
+    - Heat Calculation Modules (CMs):
+      - heat-cm-customized-heat-and-gross-floor-area-density-maps.md
+      - heat-cm-scale-heat-and-cool-density-maps.md
+      - heat-cm-demand-projection.md
+      - heat-cm-heat-load-profiles.md
+      - heat-cm-district-heating-potential-areas-user-defined-thresholds.md
+      - heat-cm-district-heating-potential-economic-assessment.md
+      - heat-cm-district-heating-potential-economic-assessment--with-temperature-levels.md
+      - heat-cm-district-heating-supply.md
+      - heat-cm-decentral-heating-supply.md
+      - heat-cm-scenario-assessment.md
+    - Cooling Calculation Modules (CMs):
+      - cooling-cm-district-cooling.md
+    - Energy Sources Calculation Modules (CMs):
+      - energy-sources-cm-solar-thermal-and-pv-potential.md
+      - energy-sources-cm-shallow-geothermal-potential.md
+      - energy-sources-cm-heat-source-potential.md
+      - energy-sources-cm-biomass-potential.md
+      - energy-sources-cm-wind-potential.md
+      - energy-sources-cm-excess-heat-transport-potential.md
+    - Industry Calculation Modules (CMs):
+      - industry-cm-add-industry-plant.md
+    - Mobility Calculation Modules (CMs):
+      - mobility-cm-electric-vehicle-density.md
+      - mobility-cm-electric-vehicles-charging-needs.md
+    - Energy System Calculation Modules (CMs):
+      - energy-system-cm-energyplan.md
   - Learning Center:
     - guideline-citiwatts-toolbox-on-local-level.md
     - guideline-heat-planning-toolchain.md
