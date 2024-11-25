@@ -71,7 +71,7 @@ nav:
   - Datasets / Layers:
     - methodology-of-data-collection.md
     - open-data-repository.md
-  - Calculation Modules (CM):
+  - Calculation Modules (CMs):
     - Heat Calculation Modules (CMs):
       - heat-cm-customized-heat-and-gross-floor-area-density-maps.md
       - heat-cm-scale-heat-and-cool-density-maps.md
