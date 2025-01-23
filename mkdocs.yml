@@ -109,4 +109,5 @@ nav:
     - case-study-reports.md
   - For Developers:
     - developers-section.md
-    - guidelines-for-defining-indicators.md
+    - layers.md
+    - cms-charts.md
