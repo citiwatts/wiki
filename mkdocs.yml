@@ -109,5 +109,5 @@ nav:
     - case-study-reports.md
   - For Developers:
     - developers-section.md
-    - layers.md
-    - cms-charts.md
+    - layers-available.md
+    - example-of-charts.md
