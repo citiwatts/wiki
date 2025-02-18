@@ -1,0 +1,3489 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/citiwatts/wiki/developers-section/">
+      
+      
+        <link rel="prev" href="../case-study-reports/">
+      
+      
+        <link rel="next" href="../layers-available/">
+      
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/citiwatts/wiki/refs/heads/main/assets/logo-mini.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Develop CMs - Citiwatts Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-calculation-modules" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Citiwatts Wiki" class="md-header__button md-logo" aria-label="Citiwatts Wiki" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/citiwatts/wiki/refs/heads/main/assets/logo-mini.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Citiwatts Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Develop CMs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/citiwatts/wiki/wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Citiwatts Wiki" class="md-nav__button md-logo" aria-label="Citiwatts Wiki" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/citiwatts/wiki/refs/heads/main/assets/logo-mini.png" alt="logo">
+
+    </a>
+    Citiwatts Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/citiwatts/wiki/wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Wiki Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Wiki Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../welcome-page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-edit-this-wiki/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Edit This Wiki
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-the-citiwatts-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the Citiwatts Toolbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General Functionalities & Structure
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            General Functionalities & Structure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction-to-user-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction To User Interface
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-account-registration-log-in-personal-layer-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Account (Registration, Log-In, Personal Layer Management)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layer-section-in-the-citiwatts-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer Section In The Citiwatts Toolbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../select-a-region-in-the-citiwatts-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Select A Region In The Citiwatts Toolbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retrieve-indicators-of-a-selected-area/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retrieve Indicators Of A Selected Area
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access-to-calculation-modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access To Calculation Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-behind-the-citiwatts-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Behind The Citiwatts Toolbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-upload-functionalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Upload Functionalities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-export-functionalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Export Functionalities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../platform-release-notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform release notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Datasets / Layers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Datasets / Layers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../methodology-of-data-collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Methodology Of Data Collection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-data-repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Data Repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Heat Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Heat Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-customized-heat-and-gross-floor-area-density-maps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heat CM: Customized Heat And Gross Floor Area Density Maps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-scale-heat-and-cool-density-maps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heat CM: Scale Heat And Cool Density Maps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-demand-projection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heat CM: Demand Projection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-heat-load-profiles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heat CM: Heat Load Profiles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-district-heating-potential-areas-user-defined-thresholds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heat CM: District Heating Potential Areas: User-Defined Thresholds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-district-heating-potential-economic-assessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heat CM: District Heating Potential: Economic Assessment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-district-heating-potential-economic-assessment--with-temperature-levels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heat CM: District Heating Potential: Economic Assessment - With Temperature Levels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-district-heating-supply/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heat CM: District Heating Supply
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-decentral-heating-supply/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heat CM: Decentral Heating Supply
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-scenario-assessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heat CM: Scenario Assessment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cooling Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cooling Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cooling-cm-district-cooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cooling CM: District Cooling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Energy Sources Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Energy Sources Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-sources-cm-solar-thermal-and-pv-potential/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Energy Sources CM: Solar Thermal And Pv Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-sources-cm-shallow-geothermal-potential/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Energy Sources CM: Shallow Geothermal Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-sources-cm-heat-source-potential/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Energy Sources CM: Heat Source Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-sources-cm-biomass-potential/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Energy Sources CM: Biomass Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-sources-cm-wind-potential/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Energy Sources CM: Wind Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-sources-cm-excess-heat-transport-potential/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Energy Sources CM: Excess Heat Transport Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Industry Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Industry Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../industry-cm-add-industry-plant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industry CM: Add Industry Plant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mobility Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Mobility Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobility-cm-electric-vehicle-density/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mobility CM: Electric Vehicle Density
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobility-cm-electric-vehicles-charging-needs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mobility CM: Electric Vehicles Charging Needs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Energy System Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Energy System Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-system-cm-energyplan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Energy system cm energyplan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learning Center
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Learning Center
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guideline-citiwatts-toolbox-on-local-level/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guideline: Citiwatts Toolbox On Local Level
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guideline-heat-planning-toolchain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guideline: Heat Planning Toolchain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guideline-district-cooling-toolchain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guideline: District Cooling Toolchain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guideline-mobility-toolchain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guideline: Mobility Toolchain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../training-materials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training Materials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../case-study-reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case Study Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    For Developers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            For Developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Develop CMs
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Develop CMs
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-calculation-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Calculation Modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-visualizationtool-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run VisualizationTool locally
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-cm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a new CM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-files-for-cm-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important files for CM development:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      File structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-signature-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Signature &amp; Inputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Signature & Inputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cm_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      cm_name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#category" class="md-nav__link">
+    <span class="md-ellipsis">
+      category
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wiki_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      wiki_url
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cm_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      cm_url
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cm_description" class="md-nav__link">
+    <span class="md-ellipsis">
+      cm_description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cm_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      cm_id
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorized_scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      authorized_scale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layers_needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      layers_needed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type_layer_needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      type_layer_needed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type_vectors_needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      type_vectors_needed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputs_calculation_module" class="md-nav__link">
+    <span class="md-ellipsis">
+      inputs_calculation_module
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    <span class="md-ellipsis">
+      name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      indicator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      graphics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector_layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      vector_layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raster_layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      raster_layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra_zip_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      extra_zip_files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      csv_files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Logs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-logs-from-local-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Logs from local machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-logs-from-development-and-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Logs from development and production
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-development-guidelines-helper-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Development guidelines &amp; Helper functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Tests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reminder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reminder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing Unit Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhance-unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhance Unit Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cover-different-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cover different scenarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Unit Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-cite" class="md-nav__link">
+    <span class="md-ellipsis">
+      How To Cite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authors-and-reviewers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authors And Reviewers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acknowledgement
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layers-available/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layers Available
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example-of-charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example of charts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-calculation-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Calculation Modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-visualizationtool-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run VisualizationTool locally
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-cm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a new CM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-files-for-cm-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important files for CM development:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      File structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-signature-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Signature &amp; Inputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Signature & Inputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cm_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      cm_name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#category" class="md-nav__link">
+    <span class="md-ellipsis">
+      category
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wiki_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      wiki_url
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cm_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      cm_url
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cm_description" class="md-nav__link">
+    <span class="md-ellipsis">
+      cm_description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cm_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      cm_id
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorized_scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      authorized_scale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layers_needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      layers_needed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type_layer_needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      type_layer_needed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type_vectors_needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      type_vectors_needed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputs_calculation_module" class="md-nav__link">
+    <span class="md-ellipsis">
+      inputs_calculation_module
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    <span class="md-ellipsis">
+      name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      indicator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      graphics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector_layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      vector_layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raster_layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      raster_layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra_zip_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      extra_zip_files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      csv_files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Logs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-logs-from-local-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Logs from local machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-logs-from-development-and-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Logs from development and production
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-development-guidelines-helper-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Development guidelines &amp; Helper functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Tests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reminder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reminder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing Unit Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhance-unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhance Unit Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cover-different-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cover different scenarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Unit Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-cite" class="md-nav__link">
+    <span class="md-ellipsis">
+      How To Cite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authors-and-reviewers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authors And Reviewers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acknowledgement
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/citiwatts/wiki/wiki/developers-section/_edit" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1 id="top">Develop CMs</h1>
+
+<h2 id="1-calculation-modules">1. Calculation Modules</h2>
+<p>A Calculation Module is a plug-in application that expends the Visualization Tool. They are used to perform calculations on georeferenced data.<br />
+In this documentation, we refer to a Calcuation Module as a <strong>CM</strong>. List of existing calculation module can be found on the main <a href="https://vlhtuleap.hevs.ch/plugins/git/git-eranet/Visualization_tool">Readme</a></p>
+<p>This documentation is meant for the CM developers, who write the calculation logic.</p>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="2-getting-started">2. Getting Started</h2>
+<h3 id="run-visualizationtool-locally">Run VisualizationTool locally</h3>
+<p>CMs have no graphical user interface (GUI). CMs are meant to be used via the Visualization Tool (citiwatts, COOLlife, Openmod4africa).<br />
+Meaning, to work on the development of a CM, the Visualization Tool is needed for testing.</p>
+<p>Follow the steps from the main <a href="https://vlhtuleap.hevs.ch/plugins/git/git-eranet/Visualization_tool">Readme</a> to run it locally on your machine.</p>
+<p>To acces to the logs, see chapter <a href="#6-logs">logs</a></p>
+<h3 id="adding-a-new-cm">Adding a new CM</h3>
+<ol>
+<li>Contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#105;&#116;&#105;&#119;&#97;&#116;&#116;&#115;&#64;&#104;&#101;&#118;&#115;&#46;&#99;&#104;">&#99;&#105;&#116;&#105;&#119;&#97;&#116;&#116;&#115;&#64;&#104;&#101;&#118;&#115;&#46;&#99;&#104;</a> to create a new git for your CM. Please specify a name, a repo name (no space, lower case) and which <a href="https://vlhtuleap.hevs.ch">vlhtuleap</a> accounts need access to it.</li>
+<li>HEVS team will duplicate base_calculation module, and adapt configuration to display it on <a href="https://citiwattsdev.hevs.ch/map">citiwatts.dev.hevs.ch</a></li>
+<li>Place the console in the calculation_modules folder and run:
+<b style="color: red;">todo list of command when adding a new cm on cm dev's computer</b> </li>
+</ol>
+<pre><code class="language-sh">$ (sudo) git ....  
+</code></pre>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="3-architecture">3. Architecture</h2>
+<p><img alt="image" src="https://github.com/user-attachments/assets/680bad6d-9d0c-4786-b0ff-bcb1671f096b" /></p>
+<p>CMs are <code>Python</code> applications built with <code>Flask</code>. They run in a docker container and they extends the functionalities of the Visualization Tool.
+CMs are run in docker containers and they communicate with the Visualisation Tool backend via a docker network. Once a CM is started, it will automatically register itself to the Backend (API). After that, the CM wait for calls to perform their computation. Those calls start from the Frontend, go the the Backend(API) and are transmitted to the CM via the intermediary of tasks and queues manager (RabbitMQ, Redis and Flower).</p>
+<p>Most of the files in a CM are there to ensure the auto-registration and the proper interactions between the CM and the rest of the Visualization Tool project. The following sequence is the relevant part for CM development:</p>
+<ol>
+<li>CM registers to backen and is identified with the SIGNATURE</li>
+<li>A CM takes in inputs, mostly georeferenced data (or layers) and more. More details in the <a href="#4-signature-and-inputs">signature and inputs</a>.</li>
+<li>Then it performs a calculation based on those data.</li>
+<li>And finally, it <a href="#5-outputs">outputs</a> the new data so that it can be displayed in the frontend of the Visualization Tool.</li>
+</ol>
+<h3 id="important-files-for-cm-development">Important files for CM development:</h3>
+<ul>
+<li>
+<p><strong>calculation_module.py:</strong>
+  Contains the <code>calculation()</code> method. <code>calculation()</code> is called when the CM is run. It is in the body of this method that the calculation happens. You have to define the <a href="#5-outputs">outputs</a> inside.
+   Path: <code>cm/app/api_v1/calculation_module.py</code></p>
+</li>
+<li>
+<p><strong>my_calculation_module_directory:</strong>
+  All additional files needed for running the calculation module must be added in this directory.
+  Path: <code>cm/app/api_v1/my_calculation_module_directory</code></p>
+</li>
+<li>
+<p><strong>transactions.py:</strong>
+  Contains all the routes used for communication between the CM and the Visualization Tool backend. Normally you don't need to edit this file.
+  Path: <code>cm/app/api_v1/transactions.py</code></p>
+</li>
+<li>
+<p><strong>constant.py:</strong>
+  Contains the constants used by the CM that defines all the inputs used to call the CM. More details in the <a href="#4-signature-and-inputs">signature and inputs</a><br />
+  Path: <code>cm/app/constant.py</code></p>
+</li>
+</ul>
+<h3 id="file-structure">File structure</h3>
+<p>The <code>base_calculation_module</code> is a simple CM, used as the base for all other CMs.<br />
+Known as the "CM - Scale heat and cool density maps" in the Visualizatin Tool, it takes a layer of type heat and a multiplication factor and returns a new layer with its data multiplied by the multiplication factor. It is available at <a href="https://vlhtuleap.hevs.ch/plugins/git/git-eranet/base_calculation_module?a=blob&amp;f=README.md&amp;hb=develop">Base CM</a>.<br />
+Below is the file structure of the <code>base_calculation_module</code>:</p>
+<pre><code>│   .gitignore
+│   docker-compose.tests.yml
+│   Jenkinsfile
+│   LICENSE
+│   README.md
+│
+└───cm
+    │   consumer_cm_alive.py
+    │   consumer_cm_compute.py
+    │   Dockerfile
+    │   gunicorn-config.py
+    │   register_cm.py
+    │   requirements.txt
+    │   run.py
+    │   run_all_local_terminal.sh
+    │   supervisord.conf
+    │   test.py
+    │   wait-for-it.sh
+    │   __init__.py
+    │
+    ├───app
+    │   │   constant.py
+    │   │   exceptions.py
+    │   │   helper.py
+    │   │   logging.conf
+    │   │   utils.py
+    │   │   __init__.py
+    │   │
+    │   ├───api_v1
+    │   │   │   calculation_module.py
+    │   │   │   errors.py
+    │   │   │   transactions.py
+    │   │   │   __init__.py
+    │   │   │
+    │   │   └───my_calculation_module_directory
+    │   │           __init__.py
+    │   │
+    │   └───decorators
+    │           caching.py
+    │           json.py
+    │           paginate.py
+    │           rate_limit.py
+    │           __init__.py
+    │
+    ├───config
+    │       development.py
+    │       production.py
+    │       testing.py
+    │       __init__.py
+    │
+    └───tests
+        │   tests.py
+        │   test_client.py
+        │   __init__.py
+        │
+        └───data
+                raster_for_test.tif
+</code></pre>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="4-signature-inputs">4. Signature &amp; Inputs</h2>
+<p>The SIGNATURE is an object that contains important information about the CM, like its name and the inputs it requires.<br />
+It can be found in <code>cm/app/constant.py</code>. Some of its fields must be completed by the CM developer.</p>
+<pre><code>INPUTS_CALCULATION_MODULE = [
+    {
+        'input_name': 'Multiplication factor',
+        'input_type': 'input',
+        'input_description': 'This factor will multiply the layer values',
+        'input_parameter_name': 'multiplication_factor',
+        'input_value': '1',
+        'input_priority': 0,
+        'input_unit': '',
+        'input_min': 0,
+        'input_max': 10, 'cm_id': CM_ID  # Do no change this value
+    },
+]
+SIGNATURE = {
+    &quot;cm_name&quot;: CM_NAME,
+    &quot;category&quot;: &quot;Demand&quot;,
+    &quot;wiki_url&quot;: &quot;https://wiki.hotmaps.hevs.ch/en/CM-Scale-heat-and-cool-density-maps&quot;,
+    &quot;cm_url&quot;: &quot;Do not add something&quot;,
+    &quot;cm_description&quot;: &quot;This calculation module allows to scale the heat demand density layer up or down.&quot;,
+    &quot;cm_id&quot;: CM_ID, # Do no change this value
+    &quot;authorized_scale&quot;:[], # Details below
+    &quot;inputs_calculation_module&quot;: INPUTS_CALCULATION_MODULE,
+    &quot;layers_needed&quot;: [],
+    &quot;type_layer_needed&quot;: [], # Details below
+    &quot;type_vectors_needed&quot;: [], # Details below
+}
+</code></pre>
+<h3 id="cm_name"><code>cm_name</code></h3>
+<p>Name of the calculation module that will be displayed in the Frontend</p>
+<h3 id="category"><code>category</code></h3>
+<p>Category of the calculation module. It is used to group CMs in the left panel of the Frontend</p>
+<h3 id="wiki_url"><code>wiki_url</code></h3>
+<p>Url of the page in the wiki</p>
+<h3 id="cm_url"><code>cm_url</code></h3>
+<p><b style="color: red;">@todo analyse utililty of this</b>  </p>
+<h3 id="cm_description"><code>cm_description</code></h3>
+<p>Description shown in the frontend, must be completed by CM developer</p>
+<h3 id="cm_id"><code>cm_id</code></h3>
+<p>ID used to make the CM accessible, must not be changed</p>
+<h3 id="authorized_scale"><code>authorized_scale</code></h3>
+<p>Can be empty/not defined. If specified, this parameter will disable all scales not declared in it.
+Different scales allowed: NUTS 0, NUTS 1, NUTS 2, NUTS 3, LAU 2, Hectare. Example: <code>"authorized_scale":["NUTS 3", "LAU 2", "Hectare"],</code></p>
+<h3 id="layers_needed"><code>layers_needed</code></h3>
+<p><b style="color: red;">@todo check what it is used for, if it is even used. This field is most likely deprecated, investigation is under way.</b></p>
+<h3 id="type_layer_needed"><code>type_layer_needed</code></h3>
+<p>Raster layers needed to run the calculation module.</p>
+<ul>
+<li>
+<p><code>name</code> : The name is shown above the input field in the frontend. If empty, description is taken instead as name.</p>
+</li>
+<li>
+<p><code>type</code> : raster layers required by the CM, this will appear as a dropdown selection in the frontend. If you put a type, all layers of this tye will be in the list. The available layers and type can be found in the <a href="https://citiwatts.github.io/wiki/layers">Layers</a> page</p>
+</li>
+<li>
+<p><code>description</code> : The description is displayed in the frontend as a tooltip. It should help the user to choose a layer.</p>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code>&quot;type_layer_needed&quot;: [
+    {
+        &quot;name&quot;:&quot;Heat demand density&quot;, 
+        &quot;type&quot;: &quot;heat&quot;, # all layers of type heat
+        &quot;description&quot;: &quot;Choose a heat demand density layer.&quot;
+    }
+    {
+        &quot;name&quot;:&quot;Heat demand residential density&quot;, 
+        &quot;type&quot;: &quot;heat_res_curr_density&quot;,  # only layer heat density residential sector
+        &quot;description&quot;: &quot;Choose a heat demand density layer.,
+    },
+]
+</code></pre>
+<p><img alt="image" src="https://github.com/user-attachments/assets/97930f3e-66b3-44a8-92eb-6e6c182e823d" /></p>
+<h3 id="type_vectors_needed"><code>type_vectors_needed</code></h3>
+<p>Vectors needed to run the calculation module.</p>
+<ul>
+<li>
+<p><code>name</code> : The name is shown above the the input field in the frontend</p>
+</li>
+<li>
+<p><code>type</code> : layers required by the CM, this will appear as a dropdown selection in the frontend. If you put a type, all layers of this tye will be in the list. The available layers and type can be found in the <a href="#layers">Layers</a> section</p>
+</li>
+<li>
+<p><code>description</code> : The description is displayed in the frontend as a tooltip. It should help the user to choose a layer</p>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code>&quot;type_vectors_needed&quot;: [
+    {&quot;name&quot;:&quot;Industrial emissions&quot;, &quot;type&quot;: &quot;industrial_database_emissions&quot;, &quot;description&quot;: &quot;You can choose the layer of type 'industrial_database_emissions'.&quot;}
+]
+</code></pre>
+<h3 id="inputs_calculation_module"><code>inputs_calculation_module</code></h3>
+<p>A CM inputs are defined in the <code>INPUTS_CALCULATION_MODULE</code> constant.</p>
+<ul>
+<li>
+<p><strong><code>input_name</code></strong>: name of the input that will be displayed on the frontend GUI</p>
+</li>
+<li>
+<p><strong><code>input_type</code></strong>: the input is the graphical control element that the user needs in order to enter data. There are five possible inputs, see <a href="https://getuikit.com/docs/form">https://getuikit.com/docs/form</a> for more information about the implementation of the frontend GUI.</p>
+<ul>
+<li>
+<p>input: this is a textbox in which the user can enter a value<br />
+<img alt="image" src="https://github.com/user-attachments/assets/d0d60a67-b742-464d-9196-be1fdc17449d" /></p>
+</li>
+<li>
+<p>select: this is a drop down menu that allows the user to choose one value from a list<br />
+<img alt="image" src="https://github.com/user-attachments/assets/b8c263b0-99b2-4e9a-99c7-bb2422cb1998" /></p>
+</li>
+<li>
+<p>radio: this allows the user to select only one of the predefined choices<br />
+<img alt="image" src="https://github.com/user-attachments/assets/8bce19b9-a696-4d70-8cad-0042ee2738c2" /></p>
+</li>
+<li>
+<p>checkbox: this allows the user to choose between two choices mutually exclusive options <b style="color: red;">/!\ @todo checkbox currently not available</b>  </p>
+</li>
+<li>
+<p>range: this allows the user to set a value by moving an indicator<br />
+<img alt="image" src="https://github.com/user-attachments/assets/b3444f61-5a96-4305-a244-d72aa1a1078b" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>input_description</code></strong>: description put in the tooltip, can be empty<br />
+<img alt="image" src="https://github.com/user-attachments/assets/95b3a039-6d99-4f3b-9e15-593d34d218e8" /></p>
+</li>
+<li>
+<p><strong><code>input_parameter_name</code></strong>: input parameter name that the CM needs to retrieve for calculation</p>
+</li>
+<li>
+<p><strong><code>input_value</code></strong>: default value for the input that will be displayed on the user interface</p>
+</li>
+<li>
+<p><strong><code>input_priority</code></strong>: this parameter allows to categorize input in the user inteface. The needed value is an integer from 0 to 4:</p>
+<ul>
+<li>0: input always visible</li>
+<li>1 : Basic inputs</li>
+<li>2 : Advanced inputs (level 1)</li>
+<li>3 : Advanced inputs (level 2)</li>
+<li><img alt="image" src="https://github.com/user-attachments/assets/36361640-36ae-493d-90ef-489ec1cb7c5d" /></li>
+</ul>
+</li>
+<li>
+<p><strong><code>cm_id</code></strong>: do no change this value</p>
+</li>
+<li>
+<p><strong><code>input_unit</code></strong>: unit add after value</p>
+</li>
+<li>
+<p><strong><code>input_min</code> &amp; <code>input_max</code></strong>: range of the input values needed, this will prevent from mistakes in the calculation</p>
+</li>
+</ul>
+<p>Find below examples of inputs:</p>
+<pre><code>INPUTS_CALCULATION_MODULE = [
+     {  'input_name': 'Write your input',
+        'input_type': 'input',
+        'input_description': 'Description of the input',
+        'input_parameter_name': 'input_item_name',
+        'input_value': 1,
+        'input_priority': 0,
+        'input_unit': '',
+        'input_min': 1,
+        'input_max': 10,
+        'cm_id': CM_ID
+      },
+      { 'input_name': 'Select your input',
+        'input_type': 'select',
+        'input_description': 'Description of the input',
+        'input_parameter_name':'input_select_name' ,
+        'input_value': [&quot;List item 1&quot;,
+                       &quot;List item 2&quot;,
+                       &quot;List item 3&quot;,
+                       &quot;List item 4&quot;],
+        'input_priority': 0,
+        'input_unit': '',
+        'input_min': '',
+        'input_max': '',
+        'cm_id': CM_ID
+      },
+      {
+        'input_name': 'Select the radio button',
+        'input_type': 'radio',
+        'input_description': 'Description of the input',
+        'input_parameter_name': 'input_radio_name',
+        'input_value': ['Yes', 'No'],
+        'input_priority': 0,
+        'input_unit': '',
+        'input_min': '',
+        'input_max': '',
+        'cm_id': CM_ID
+      },
+      {
+         #&lt;b style=&quot;color: red;&quot;&gt;@todo checkbox example &lt;/b&gt;
+      },
+      {
+         'input_name': 'Move the slider to select your value',
+         'input_type': 'range',
+         'input_parameter_name': 'input_range_name',
+         'input_value': 23.5, 
+         'input_priority': 0,
+         'input_unit': '%' + ' of area',
+         'input_min': 0,
+         'input_max': 100,
+         'cm_id': CM_ID
+      },
+]
+</code></pre>
+<p><img alt="image" src="https://github.com/user-attachments/assets/0fc4294b-398f-4685-b1b1-74b3b7f6c964" /></p>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="5-outputs">5. Outputs</h2>
+<p>The Outputs are all the data that the CM will return to the be displayed in the Visualization Tool. Standards have been defined to ensure the frontend can display the data correctly. It can be found in <code>cm/app/api_v1/calculation_module.py</code>
+All the outputs should be retunred in the form of a dictionary named <code>result</code>. Find below an example:</p>
+<pre><code>&quot;result&quot;:{
+    &quot;name&quot;:&quot;CM - Scale heat and cool density maps&quot;,
+    &quot;indicator&quot;:[...],
+    &quot;graphics&quot;:[...],
+    &quot;vector_layers&quot;:[...], 
+    &quot;raster_layers&quot;:[...], 
+    &quot;extra_zip_files&quot;:[...],
+    &quot;csv_files&quot;:[...]
+}
+</code></pre>
+<h3 id="name"><code>name</code></h3>
+<p>Name display at the top of the results in frontend</p>
+<h3 id="indicator"><code>indicator</code></h3>
+<p>Array of indicators, each item in the array must have:</p>
+<ul>
+<li><strong><code>unit</code> (string):</strong> unit of the indicator</li>
+<li><strong><code>name</code> (string):</strong> name of the indicator</li>
+<li><strong><code>value</code> (number):</strong> value of the indicator</li>
+</ul>
+<pre><code class="language-python">&quot;indicator&quot;:[
+    {
+        &quot;unit&quot;:&quot;GWh/yr&quot;,
+        &quot;name&quot;:&quot;Heat density total multiplied by 1.0&quot;,
+        &quot;value&quot;:&quot;398.82725&quot;
+    }, 
+    {
+        &quot;unit&quot;: &quot;&quot;, 
+        &quot;name&quot;: &quot;Successful intervention strategy&quot;, 
+        &quot;value&quot;: 'Feedback &amp; gamification through an App'
+    }
+],
+</code></pre>
+<p>Indicators result:</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/3ba83aea-f671-4bdd-9e68-a3185abddbb8" />
+  <img alt="image" src="https://github.com/user-attachments/assets/5a1f08e7-cfa2-4f2d-bc9f-48d0b03f0258" /></p>
+<h3 id="graphics"><code>graphics</code></h3>
+<p>Array of graphs, each item in the array is contains the neccessary data to produce a chartjs graph. Find below the most common item to declare for a graph, for more detail refer to chartjs documentation:</p>
+<ul>
+<li>
+<p><strong><code>type</code> (string) :</strong> type of the graphic that will be displayed. The possible types are <em>bar</em>, <em>line</em>, <em>radar</em>, <em>pie</em>, <em>polarArea</em>, <em>bubble</em>:</p>
+<ul>
+<li><strong>line:</strong> a line chart or line graph is a type of chart which displays information as a series of data points called 'markers' connected by a straight line segment:</li>
+<li><strong>bar:</strong> a bar chart or bar graph is a chart or graph that presents categorical data with rectangular bars with heights or lengths proportional to the values that they represent:</li>
+<li><strong>radar:</strong> a radar chart is a way of showing multiple data points and the variation between them:</li>
+<li><strong>pie:</strong> a pie chart is divided into segments, the arc of each segment shows the proportional value of each piece of data:</li>
+<li><strong>polarArea:</strong> polar area charts are similar to pie charts, but each segment has the same angle - the radius of the segment differs depending on the value:</li>
+</ul>
+</li>
+<li>
+<p><b style="color: red;">deprecated</b> <strong><code>xLabel</code>:</strong> This attribute is not supported by chartjs anymore, to define the text displayed on x-axis, use the new syntax</p>
+</li>
+<li><b style="color: red;">deprecated</b> <strong><code>yLabel</code>:</strong> This attribute is not supported by chartjs anymore, to define the text displayed on y-axis, use the new syntax
+    New syntax to specify axis names. (do not add to pie diagrams or it will add axis lines):</li>
+</ul>
+<pre><code class="language-python">    &quot;options&quot;: {
+        &quot;scales&quot;: {
+            &quot;x&quot;: {
+                &quot;title&quot;: {
+                    &quot;display&quot;: True,
+                    &quot;text&quot;:&quot;x axis name&quot;
+                }
+            },
+            &quot;y&quot;: {
+                &quot;title&quot;: {
+                &quot;display&quot;: True,
+                &quot;text&quot;:&quot;y axis name&quot;
+            }
+        }
+    }
+</code></pre>
+<ul>
+<li>
+<p><strong>data:</strong> contains labels and datasets</p>
+<ul>
+<li><strong>labels (string[]) :</strong> x axis labels only x axis.</li>
+<li><strong>datasets (array):</strong> set of data with its configuration</li>
+<li><strong>label (string) :</strong> serie's label</li>
+<li><strong>backgroundColor (string[]) :</strong> background color of each value to display</li>
+<li><strong>data (number[]) :</strong> values of the serie</li>
+</ul>
+</li>
+<li>
+<p><strong><code>options</code>:</strong> options available to handle the charts, learn more at <a href="https://www.chartjs.org/docs/latest/charts/line.html">https://www.chartjs.org/docs/latest/charts/line.html</a>, /!\ chartjs example are in JavaScript and should be adapted to Python syntax</p>
+</li>
+</ul>
+<p><b>All chart types and code example in page <a href="https://citiwatts.github.io/wiki/cms-charts/">charts CMs</a></b><br />
+  Basic implementation :</p>
+<pre><code class="language-python">  graphics = []
+  graphics.append(
+    {
+      &quot;type&quot;: &quot;bar&quot;,
+      &quot;data&quot;: {
+        &quot;labels&quot;: [&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;, &quot;Sunday&quot;],
+        &quot;datasets&quot;: [
+          {
+            &quot;label&quot;: &quot;Temperature (°C)&quot;,
+            &quot;data&quot;: [12, 15, 14, 17, 20, 22, 19],
+            &quot;backgroundColor&quot;: &quot;#4169E1&quot;, #blue
+            &quot;borderColor&quot;: &quot;#ff0000&quot;, #red
+            &quot;borderWidth&quot;: 1
+          }
+        ]
+      },
+      &quot;options&quot;: {
+        &quot;responsive&quot;: True,
+        &quot;scales&quot;: {
+          &quot;y&quot;: {
+            &quot;beginAtZero&quot;: True
+          }
+        }
+      }
+    }
+  )
+  result = dict()
+  result['graphics'] = graphics
+</code></pre>
+<p><img alt="image" src="https://github.com/user-attachments/assets/9a9f1fe5-be1c-4e35-9aa0-011b0c6ee519" /></p>
+<h3 id="vector_layers"><code>vector_layers</code></h3>
+<ul>
+<li><strong><code>name</code> (string):</strong> Should include "shapefile", name to be displayed on the frontend</li>
+<li><strong><code>path</code> (string):</strong> path generated for the geotif file</li>
+<li><strong><code>type</code> (string):</strong> type of the layer generated for symbology (legend). If set as custom, <code>symboloby</code> must be defined. This case is usefull for dynamic legend.</li>
+<li><strong><code>symbology</code>:</strong> <b style="color: red;">@todo describe </b></li>
+</ul>
+<pre><code class="language-python">[
+    {
+        &quot;name&quot;: &quot;shapefile of coherent areas with their potential&quot;, 
+        &quot;path&quot;: output_shp1 
+    },
+    {
+        &quot;name&quot;: &quot;District Cooling areas and there potentials - shapefile&quot;, 
+        &quot;path&quot;: output_shp, 
+        &quot;type&quot;: &quot;custom&quot;,
+        &quot;symbology&quot;: [
+            {&quot;red&quot;: 254, &quot;green&quot;: 237, &quot;blue&quot;: 222, &quot;opacity&quot;: 0.5, &quot;value&quot;: symbol_vals_str[0], &quot;label&quot;: symbol_vals_str[0] + &quot; GWh&quot;},
+            {&quot;red&quot;: 253, &quot;green&quot;: 208, &quot;blue&quot;: 162, &quot;opacity&quot;: 0.5, &quot;value&quot;: symbol_vals_str[1], &quot;label&quot;: symbol_vals_str[1] + &quot; GWh&quot;},
+            {&quot;red&quot;: 253, &quot;green&quot;: 174, &quot;blue&quot;: 107, &quot;opacity&quot;: 0.5, &quot;value&quot;: symbol_vals_str[2], &quot;label&quot;: symbol_vals_str[2] + &quot; GWh&quot;},
+            {&quot;red&quot;: 253, &quot;green&quot;: 141, &quot;blue&quot;: 60, &quot;opacity&quot;: 0.5, &quot;value&quot;: symbol_vals_str[3], &quot;label&quot;: symbol_vals_str[3] + &quot; GWh&quot;},
+            {&quot;red&quot;: 230, &quot;green&quot;: 85, &quot;blue&quot;: 13, &quot;opacity&quot;: 0.5, &quot;value&quot;: symbol_vals_str[4], &quot;label&quot;: symbol_vals_str[4] + &quot; GWh&quot;},
+            {&quot;red&quot;: 166, &quot;green&quot;: 54, &quot;blue&quot;: 3, &quot;opacity&quot;: 0.5, &quot;value&quot;: str(float(symbol_vals_str[4]) + step), &quot;label&quot;: &quot;&gt;&quot; + symbol_vals_str[4] + &quot; GWh&quot;}
+        ]
+    }
+]
+</code></pre>
+<ul>
+<li>vector not custom result:  </li>
+</ul>
+<p><img alt="image" src="https://github.com/user-attachments/assets/e4103878-a3a6-4531-a002-676d7f85adcd" /></p>
+<ul>
+<li>vector file custom result:</li>
+</ul>
+<p><img alt="image" src="https://github.com/user-attachments/assets/5d364e3c-bc74-4f4f-93a3-aac792241cf8" /></p>
+<h3 id="raster_layers"><code>raster_layers</code></h3>
+<p>array of raster layers</p>
+<ul>
+<li><strong><code>name</code> (string):</strong> name to be displayed on the frontend</li>
+<li><strong><code>path</code> (string):</strong> path generated for the geotif file</li>
+<li><strong><code>type</code> (string):</strong> type of the layer generated for symbology (legend). If set as custom, <code>symboloby</code> must be defined. This case is usefull for dynamic legend.</li>
+<li><strong><code>symbology</code>:</strong> <b style="color: red;">@todo describe </b></li>
+<li><strong><code>layer</code> (string):</strong> type of the layer generated (for toolchaining in CM)</li>
+</ul>
+<p>In order to generate a path, developers should use the function <em>generate_output_file_tif()</em>, which needs the output directory as an argument. This function should be imported to the <code>calculation_module.py</code>. The path must be generated on the first lines of <em>calculation()</em> function found in <code>calculation_module.py</code>. This funciton For example:</p>
+<pre><code class="language-python">    output_tif_1 = generate_output_file_tif(output_directory)
+</code></pre>
+<p>All the layers outputs must be retrieved and added to the <strong>raster_layers</strong> array after they have been generated by the calculation module provider functions.</p>
+<pre><code class="language-python">[
+    {
+        &quot;name&quot;:&quot;layers of heat_density 1.0&quot;,
+        &quot;path&quot;: output_raster1 
+        &quot;type&quot;:&quot;heat&quot;,
+        &quot;layer&quot;:&quot;heat_tot_curr_density&quot;
+    },
+    {
+        &quot;name&quot;: &quot;district heating coherent areas&quot;, 
+        &quot;path&quot;: output_raster1, 
+        &quot;type&quot;: &quot;custom&quot;,
+        &quot;symbology&quot;: [{&quot;red&quot;: 250, &quot;green&quot;: 159, &quot;blue&quot;: 181, &quot;opacity&quot;: 0.8, &quot;value&quot;: &quot;1&quot;, &quot;label&quot;: &quot;DH Areas&quot;}]
+    }
+]
+</code></pre>
+<ul>
+<li>raster no custom result:</li>
+</ul>
+<p><img alt="image" src="https://github.com/user-attachments/assets/679bd52d-3a65-478e-8a05-0790096d9f0c" /></p>
+<ul>
+<li>raster custom result:</li>
+</ul>
+<p><img alt="image" src="https://github.com/user-attachments/assets/89c28113-0f48-4d74-a3a8-29f4526211c2" /></p>
+<h3 id="extra_zip_files"><code>extra_zip_files</code></h3>
+<p>How to return a .zip file:</p>
+<ol>
+<li>Import the <code>create_extra_zip_file()</code> helper function:</li>
+</ol>
+<pre><code class="language-python">     # in calculation_module.py
+     from ..helper import create_extra_zip_file
+</code></pre>
+<ol>
+<li>
+<p>Use the new helper function <code>create_extra_zip_file()</code> to create the <code>.zip</code> file to return:</p>
+<p>The first parameter must be the output directory path. It is recommended to use <code>output_directory</code> that is accessible in the <code>calculation()</code> method of <code>calculation_module.py</code>.</p>
+<p>Any other parameter should be a path to a file that must be added to the zip. There can be as many file path passed as parameters as needed. </p>
+</li>
+</ol>
+<p>In calculation_module.py:</p>
+<pre><code class="language-python">    def calculation(output_directory, inputs_raster_selection, inputs_parameter_selection):
+        extra_output_files = create_extra_zip_file(output_directory, path_to_extra_file1, path_to_extra_file2)
+</code></pre>
+<ol>
+<li>
+<p>Add the <code>.zip</code> to the <code>result</code> dict:</p>
+<p>use <code>"extra_zip_files"</code> as the key</p>
+<p>The <code>.zip</code> must be added as an object in an array, meaning you could return multiple <code>.zip</code></p>
+<p><code>[{"name": "name-shown-when-downloaded", "path": path-returned-by-create_extra_zip_file}]</code></p>
+</li>
+</ol>
+<pre><code class="language-python">    # in calculation_module.py
+    def calculation(output_directory, inputs_raster_selection, inputs_parameter_selection):
+        extra_output_files = create_extra_zip_file(output_directory, path_to_extra_file1, path_to_extra_file2)
+        result[&quot;extra_zip_files&quot;] = [{&quot;name&quot;: &quot;ComplementaryCSVandLogs&quot;, &quot;path&quot;: extra_output_files }]
+</code></pre>
+<h3 id="csv_files"><code>csv_files</code></h3>
+<p>See below how to add .csv files to the outputs:</p>
+<p>The <code>.csv</code> must be added as an object in an array, meaning you can return multiple <code>.csv</code></p>
+<p><code>[{"name": "name-shown-when-downloaded", "path": path-to-csv-file}]</code></p>
+<pre><code class="language-python">    # in calculation_module.py
+    def calculation(output_directory, inputs_raster_selection, inputs_parameter_selection):
+        result[&quot;csv_files&quot;] = [{&quot;name&quot;: &quot;ComplementaryCSV&quot;, &quot;path&quot;: path_to_complementary_csv }]
+</code></pre>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="6-logs">6. Logs</h2>
+<p>Logs can help in the development process and for monitoring purposes.
+To log from a CM, avoid using <code>print()</code>. The print statement is not always flushed and it may not appear in the log files. Instead use :</p>
+<ul>
+<li><code>logging.info("log")</code> (with <code>import logging</code>)</li>
+<li><code>print("log", flush=True)</code></li>
+</ul>
+<p>examples:</p>
+<pre><code class="language-python">    import logging
+    logging.info(&quot;Log message&quot;)       #-&gt; 2025-01-02 08:59:55 [97] [INFO] Log message
+    print(&quot;Log message&quot;, flush=True)  #-&gt; Log message
+</code></pre>
+<h3 id="access-logs-from-local-machine">Access Logs from local machine</h3>
+<p>At <code>Visualization_tool\.dockerVolumes\logs\calculation_modules\base_calculation_module</code>, you can find the all the log files generated by the instance of the CM running on you local machine.<br />
+At <code>.dockerVolumes\logs\calculation_modules\base_calculation_module\calculation_module_service.out.log</code>, you can find your logs defined as explained in this documentation.</p>
+<p>Python syntax errors should also be logged in <code>.dockerVolumes\logs\calculation_modules\base_calculation_module\calculation_module_service.out.log</code>.</p>
+<h3 id="access-logs-from-development-and-production">Access Logs from development and production</h3>
+<p>To obtain access and information relating to the VPN, an email must be sent to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#105;&#116;&#105;&#119;&#97;&#116;&#116;&#115;&#64;&#104;&#101;&#118;&#115;&#46;&#99;&#104;">&#99;&#105;&#116;&#105;&#119;&#97;&#116;&#116;&#115;&#64;&#104;&#101;&#118;&#115;&#46;&#99;&#104;</a>. The HES-SO Valais-Wallis IT department will then send an email to the requester with the information needed to download the VPN software and connection access. You will also receive a login from <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#105;&#116;&#105;&#119;&#97;&#116;&#116;&#115;&#64;&#104;&#101;&#118;&#115;&#46;&#99;&#104;">&#99;&#105;&#116;&#105;&#119;&#97;&#116;&#116;&#115;&#64;&#104;&#101;&#118;&#115;&#46;&#99;&#104;</a> to access the SFTP server containing the logs. We recommend using the filezilla client to access the contents of the SFTP server.</p>
+<p>Once connected to the SFTP server, the user can view a folder by module calculation. Inside, there are 8 log files (calculation_module_service.err.log, calculation_module_service.out.log, consumer_cm_alive.err.log, consumer_cm_alive.out.log, consumer_cm_compute.err.log, consumer_cm_compute.out.log, register_cm.err.log, register_cm.out.log). It is within these files that the developers of calculation module will be able to find all the system logs.</p>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="7-development-guidelines-helper-functions">7. Development guidelines &amp; Helper functions</h2>
+<p><b style="color: red;">@todo</b> 
+* Where to code the calculation logic of the CM? -&gt; see <a href="#signature-and-inputs">signature and inputs</a>
+* How to retrieve the fields and the layers
+* Helper functions</p>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="8-tests">8. Tests</h2>
+<p>CM developers are encouraged to utilize Unit Tests to enhance the quality of their CM code. By identifying bugs early, ensuring expected functionality, and automating testing, Unit Tests streamline development. They also make refactoring safer, improve code structure, and simplify debugging.</p>
+<h3 id="reminder">Reminder</h3>
+<p>A unit test checks the smallest testable parts of an application (units) in isolation to ensure they work correctly. It is typically automated and focuses on individual functions, methods, or classes.</p>
+<h3 id="writing-unit-tests">Writing Unit Tests</h3>
+<p>The <code>base_calculation_module</code> already contains a <code>/tests</code> folder with a <code>tests.py</code> file that must be completed for each CM.</p>
+<pre><code class="language-python">    class TestAPI(unittest.TestCase):
+        def setUp(self):
+            ...
+
+        def tearDown(self):
+            ...
+
+        def test_compute(self):
+            raster_file_path = 'tests/data/raster_for_test.tif'
+            # simulate copy from HTAPI to CM
+            save_path = UPLOAD_DIRECTORY+&quot;/raster_for_test.tif&quot;
+            copyfile(raster_file_path, save_path)
+
+            inputs_raster_selection = {}
+            inputs_parameter_selection = {}
+            inputs_vector_selection = {}
+            inputs_raster_selection[&quot;heat&quot;]  = save_path
+            inputs_vector_selection[&quot;industrial_database_emissions&quot;] = ''
+            inputs_parameter_selection[&quot;multiplication_factor&quot;] = 2
+
+            # register the calculation module a
+            payload = {&quot;inputs_raster_selection&quot;: inputs_raster_selection,
+                   &quot;inputs_parameter_selection&quot;: inputs_parameter_selection,
+                   &quot;inputs_vector_selection&quot;: inputs_vector_selection}
+
+            rv, json = self.client.post('computation-module/compute/', data=payload)
+
+            # Assert CM API has been called successfully
+            self.assertTrue(rv.status_code == 200)
+            ...
+</code></pre>
+<p>This file defines a class that subclasses <code>unittest.TestCase</code> and will be therefore discovered as Unit Test by the Python Unit Test Framework (<strong>unittest</strong>).</p>
+<p>The <code>test_compute(self)</code> method triggers the communication route of the CM API in order to call the <code>calculation()</code> method explicitly defined per CM in <code>/cm/app/api_v1/calculation_module.py</code>. Depending on the calculation implemented, appropriate inputs must be set accordingly: <code>inputs_raster_selection</code>, <code>inputs_parameter_selection</code>, <code>inputs_parameter_selection</code>, <code>inputs_vector_selection</code>.</p>
+<p><code>self.assertTrue(rv.status_code == 200</code> asserts that the CM API has been called successfully.</p>
+<h3 id="enhance-unit-tests">Enhance Unit Tests</h3>
+<p>More than only testing if the CM can be successfully called, CM developers are advised to deeply test their code.</p>
+<p>This can be first realized by verifying the results of the <code>calculation()</code> method.</p>
+<p>The last lines in <code>test_compute(self)</code> method assert that the calculated values correspond to the expected values. Each section of the results are compared individually:</p>
+<pre><code class="language-python">    # Assert result is correct
+    expected_result = {
+        'name': 'CM - Scale heat and cool density maps',
+    'indicator': [
+        {&quot;unit&quot;: &quot;GWh/yr&quot;, &quot;name&quot;: &quot;Heat density total multiplied by  2.0&quot;, &quot;value&quot;: '14070.01'}
+    ],
+    'graphics': [],
+    'vector_layers': [],
+    'raster_layers': [{&quot;name&quot;: &quot;layers of heat_density 2.0&quot;, &quot;path&quot;: 'dummy_output.tif', &quot;type&quot;: &quot;heat&quot;, &quot;layer&quot;: &quot;heat_tot_curr_density&quot;}]
+    }
+    result = json['result']
+    self.assertEqual(result['indicator'], expected_result['indicator'])
+    self.assertEqual(result['name'], expected_result['name'])
+    self.assertEqual(result['indicator'][0]['unit'], expected_result['indicator'][0]['unit'])
+    self.assertEqual(result['indicator'][0]['name'], expected_result['indicator'][0]['name'])
+    self.assertEqual(result['indicator'][0]['value'], expected_result['indicator'][0]['value'])
+    self.assertEqual(result['raster_layers'][0]['name'], expected_result['raster_layers'][0]['name'])
+    self.assertEqual(result['raster_layers'][0]['type'], expected_result['raster_layers'][0]['type'])
+    self.assertEqual(result['raster_layers'][0]['layer'], expected_result['raster_layers'][0]['layer'])
+</code></pre>
+<p>Comparisons rely on the given inputs, so testing multiple inputs is essential to cover a wide range of scenarios.</p>
+<h3 id="cover-different-scenarios">Cover different scenarios</h3>
+<p>CM developers are encouraged to create multiple <code>test_*</code> methods in <code>tests.py</code> file to cover individually different scenarios. These scenarios can be identified as the edge cases that the CM must support.</p>
+<p>Additional <code>test_*</code> methods should verify that:
+* Results vary accordingly to the inputs provided
+* Outputs files correspond to the expectations (quantity, name, path, content, ...)
+* Exceptions should be raised when necessary (type, message, ...)</p>
+<h3 id="run-unit-tests">Run Unit Tests</h3>
+<p>Unit Tests run inside a container.</p>
+<p>From the CM root folder (containing <code>docker-compose.tests.yml</code> file), CM developers can run Unit Test with following command:
+<code>docker-compose -f docker-compose.tests.yml up --build --force-recreate</code></p>
+<p><img alt="OK" src="https://github.com/user-attachments/assets/fb9ba9a7-f6bc-4ad4-bfd0-ec69da733834" /></p>
+<p>In this case, <code>1</code> test has been run and <code>OK</code> statement confirm that everything ran correctly. </p>
+<p>In case of errors, CM developers are quickly informed that some tests have failed. </p>
+<p><img alt="KO" src="https://github.com/user-attachments/assets/5ae8e0ff-c715-46a4-9404-940cbbc3092d" /></p>
+<p>Stack trace is provided to indicate in which file (i.e. <code>calculation_module.py</code>) and where (i.e. <code>line 46</code>) error happened. </p>
+<h3 id="automated-testing">Automated testing</h3>
+<p>Unit Tests are run by our CI/CD infrastructure. The Jenkins file located in every CM root folder calls the <code>docker-compose -f docker-compose.tests.yml</code> command on every commit made in CM repository. </p>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="references">References</h2>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="how-to-cite">How To Cite</h2>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="authors-and-reviewers">Authors And Reviewers</h2>
+<p>This page was written by the Hotmaps Team and namely by:</p>
+<p><a href="https://www.hevs.ch/easilab">EASILab - HES-SO</a>: David Gianadda, Gwenaëlle Gustin, Jérémie Vanin</p>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="license">License</h2>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="acknowledgement">Acknowledgement</h2>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../case-study-reports/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Case Study Reports">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Case Study Reports
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../layers-available/" class="md-footer__link md-footer__link--next" aria-label="Next: Layers Available">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Layers Available
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/citiwatts/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
