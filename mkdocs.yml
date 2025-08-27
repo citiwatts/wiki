@@ -60,8 +60,8 @@ theme:
 
 nav:
   - Wiki Introduction:
-    - home.md
-    - welcome-page.md
+    - Home.md
+     <!--- - welcome-page.md --->
     - about-the-citiwatts-toolbox.md
   - General Functionalities & Structure:
     - introduction-to-user-interface.md
