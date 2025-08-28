@@ -60,7 +60,7 @@ theme:
 
 nav:
   - Wiki Introduction:
-     <!--- - welcome-page.md --->
+    - Home.md
     - about-the-citiwatts-toolbox.md
   - General Functionalities & Structure:
     - introduction-to-user-interface.md
