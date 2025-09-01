@@ -89,7 +89,7 @@ nav:
       - heat-cm-scenario-assessment.md
     - Cooling Calculation Modules (CMs):
       - cooling-cm-district-cooling.md
-      - cooling-cm-district-cooling-scenario-assessment.md
+      - cooling_cm_district_cooling_scenario_assessment.md
     - Energy Sources Calculation Modules (CMs):
       - energy-sources-cm-solar-thermal-and-pv-potential.md
       - energy-sources-cm-shallow-geothermal-potential.md
@@ -102,10 +102,10 @@ nav:
     - Mobility Calculation Modules (CMs):
       - mobility-cm-electric-vehicle-density.md
       - mobility-cm-electric-vehicles-charging-needs.md
-      - mobility-cm-electric-vehicle-scenario-assessment.md
+      - mobility_cm_electric_vehicle_scenario_assessment.md
     - Energy System Calculation Modules (CMs):
       - Energy-System-CM-EnergyPLAN-CM.md
-      - energy-system-cm-energyplan-scenario-assessment.md
+      - energy_system_cm_energyplan_scenario_assessment.md
   - Learning Center:
     - Learning_Toolchain_Approach.md
     - eLearning, Webinars and Training Materials:
