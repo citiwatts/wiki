@@ -101,8 +101,10 @@ nav:
     - Mobility Calculation Modules (CMs):
       - mobility-cm-electric-vehicle-density.md
       - mobility-cm-electric-vehicles-charging-needs.md
+      - mobility‐cm‐electric‐vehicle‐scenario‐assessment.md
     - Energy System Calculation Modules (CMs):
-      - energy-system-cm-energyplan.md
+      - Energy-System-CM-EnergyPLAN-CM.md
+      - energy-system-cm-energyplan-scenario-assessment.md
   - Learning Center:
     - Learning_Toolchain_Approach.md
     - eLearning, Webinars and Training Materials:
