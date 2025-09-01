@@ -89,6 +89,7 @@ nav:
       - heat-cm-scenario-assessment.md
     - Cooling Calculation Modules (CMs):
       - cooling-cm-district-cooling.md
+      - cooling-cm-district-cooling-scenario-assessment.md
     - Energy Sources Calculation Modules (CMs):
       - energy-sources-cm-solar-thermal-and-pv-potential.md
       - energy-sources-cm-shallow-geothermal-potential.md
