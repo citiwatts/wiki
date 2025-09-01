@@ -105,6 +105,11 @@ nav:
     - Energy System Calculation Modules (CMs):
       - energy-system-cm-energyplan.md
   - Learning Center:
+    - Learning_Toolchain_Approach.md
+    - Learning_Heat_Planning.md
+    - Learning_Cool_Planning.md
+    - Learning_EV_Mobility_Scenarios.md
+    - Learning_EnergyPLAN_CM.md
     - guideline-citiwatts-toolbox-on-local-level.md
     - guideline-heat-planning-toolchain.md
     - guideline-district-cooling-toolchain.md
