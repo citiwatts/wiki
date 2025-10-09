@@ -1,0 +1,3003 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/citiwatts/wiki/energy-system-cm-energyplan-cm/">
+      
+      
+        <link rel="prev" href="../mobility-cm-electric-vehicles-charging-needs/">
+      
+      
+        <link rel="next" href="../learning-toolchain-approach/">
+      
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/citiwatts/wiki/refs/heads/main/assets/logo-mini.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Energy System CM: EnergyPLAN CM - Citiwatts Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#in-a-glance" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Citiwatts Wiki" class="md-header__button md-logo" aria-label="Citiwatts Wiki" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/citiwatts/wiki/refs/heads/main/assets/logo-mini.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Citiwatts Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Energy System CM: EnergyPLAN CM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/citiwatts/wiki/wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Citiwatts Wiki" class="md-nav__button md-logo" aria-label="Citiwatts Wiki" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/citiwatts/wiki/refs/heads/main/assets/logo-mini.png" alt="logo">
+
+    </a>
+    Citiwatts Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/citiwatts/wiki/wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Wiki Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Wiki Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-the-citiwatts-toolbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About the Citiwatts Toolbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    General Functionalities & Structure
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            General Functionalities & Structure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction-to-user-interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction To User Interface
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-account-registration-log-in-personal-layer-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Account (Registration, Log-In, Personal Layer Management)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layer-section-in-the-citiwatts-toolbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Layer Section In The Citiwatts Toolbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../select-a-region-in-the-citiwatts-toolbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Select A Region In The Citiwatts Toolbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retrieve-indicators-of-a-selected-area/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Retrieve Indicators Of A Selected Area
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access-to-calculation-modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Access To Calculation Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-behind-the-citiwatts-toolbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Behind The Citiwatts Toolbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-upload-functionalities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Upload Functionalities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-export-functionalities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Export Functionalities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../platform-release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Platform release notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Datasets / Layers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Datasets / Layers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../methodology-of-data-collection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methodology Of Data Collection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-data-repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Data Repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Heat Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Heat Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-customized-heat-and-gross-floor-area-density-maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Heat CM: Customized Heat And Gross Floor Area Density Maps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-scale-heat-and-cool-density-maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Heat CM: Scale Heat And Cool Density Maps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-demand-projection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Heat CM: Demand Projection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-heat-load-profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Heat CM: Heat Load Profiles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-district-heating-potential-areas-user-defined-thresholds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Heat CM: District Heating Potential Areas: User-Defined Thresholds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-district-heating-potential-economic-assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Heat CM: District Heating Potential: Economic Assessment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-district-heating-potential-economic-assessment--with-temperature-levels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Heat CM: District Heating Potential: Economic Assessment - With Temperature Levels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-district-heating-supply/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Heat CM: District Heating Supply
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heat-cm-decentral-heating-supply/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Heat CM: Decentral Heating Supply
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cooling Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cooling Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cooling-cm-district-cooling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cooling CM: District Cooling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Energy Sources Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Energy Sources Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-sources-cm-solar-thermal-and-pv-potential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Energy Sources CM: Solar Thermal And PV Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-sources-cm-shallow-geothermal-potential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Energy Sources CM: Shallow Geothermal Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-sources-cm-heat-source-potential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Energy Sources CM: Heat Source Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-sources-cm-biomass-potential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Energy Sources CM: Biomass Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-sources-cm-wind-potential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Energy Sources CM: Wind Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy-sources-cm-excess-heat-transport-potential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Energy Sources CM: Excess Heat Transport Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Industry Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Industry Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../industry-cm-add-industry-plant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Industry CM: Add Industry Plant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Mobility Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Mobility Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobility-cm-electric-vehicle-density/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobility CM: Electric Vehicle Density
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobility-cm-electric-vehicles-charging-needs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mobility CM: Electric Vehicles Charging Needs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Energy System Calculation Modules (CMs)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Energy System Calculation Modules (CMs)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Energy System CM: EnergyPLAN CM
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Energy System CM: EnergyPLAN CM
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#in-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      In A Glance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excel-tool-and-connections-with-other-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Excel tool and connections with other CMs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-values-in-the-cm-energyplan-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input values in the CM EnergyPLAN interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input values in the CM EnergyPLAN interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inputs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic inputs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced inputs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs-from-cm-energyplan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs from CM EnergyPLAN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#renewables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renewables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inflexible-electricity-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inflexible electricity demand
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#individual-heating-demand-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Individual heating demand solutions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#district-heating" class="md-nav__link">
+    <span class="md-ellipsis">
+      District heating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electric-mobilitytransportation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electric mobility/transportation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electricity-market-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electricity market prices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Run
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-cite" class="md-nav__link">
+    <span class="md-ellipsis">
+      How To Cite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authors-and-reviewers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authors And Reviewers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acknowledgement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disclaimers
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Learning Center
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Learning Center
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-toolchain-approach/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Toolchain Approach: Conducting Scenario Assessments in the citiwatts platform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    eLearning, Webinars and Training Materials
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            eLearning, Webinars and Training Materials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-heat-planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    I: Heat Planning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-cool-planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    II: Cool Planning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-ev-mobility-scenarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    III: Electric Vehicle Scenarios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-energyplan-cm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IV: Energy System Analysis and Flexibility (EnergyPLAN CM)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../case-study-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Case Study Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    For Developers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            For Developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-edit-this-wiki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How To Edit This Wiki
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers-section/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Develop CMs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layers-available/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Layers Available
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example-of-charts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Example of charts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#in-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      In A Glance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excel-tool-and-connections-with-other-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Excel tool and connections with other CMs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-values-in-the-cm-energyplan-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input values in the CM EnergyPLAN interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input values in the CM EnergyPLAN interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inputs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic inputs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced inputs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs-from-cm-energyplan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs from CM EnergyPLAN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#renewables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renewables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inflexible-electricity-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inflexible electricity demand
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#individual-heating-demand-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Individual heating demand solutions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#district-heating" class="md-nav__link">
+    <span class="md-ellipsis">
+      District heating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electric-mobilitytransportation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electric mobility/transportation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electricity-market-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electricity market prices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Run
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-cite" class="md-nav__link">
+    <span class="md-ellipsis">
+      How To Cite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authors-and-reviewers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authors And Reviewers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acknowledgement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disclaimers
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/citiwatts/wiki/wiki/energy-system-cm-energyplan-cm/_edit" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1 id="top">Energy System CM: EnergyPLAN CM</h1>
+
+<h2 id="in-a-glance">In A Glance</h2>
+<p>This calculation module (CM) allows the user to make “what-if” scenarios for flexibility. It is a simplified version of advanced energy system analyses tool EnergyPLAN in the Citiwatts environment. It has a focus on flexibility options related to the connection between electricity, heating and transportation sectors. The CM will hereafter be referred to as “CM EnergyPLAN”, whereas the downloadable full version will be referred to as EnergyPLAN. EnergyPLAN is a deterministic energy system analyses tool, that enables the user to analyse developments in the entire energy system across different energy sectors. The “CM EnergyPLAN”, however, <em><strong>only includes individual heating, district heating and transportation demands, as they relate to the connection to the electricity system</strong></em>, and the “CM EnergyPLAN” therefore is a limited and simplified version of EnergyPLAN. “CM EnergyPLAN” is developed with a focus on enabling the user to investigate these sectors effect on the electricity system, including the flexibility options of these technologies. For the “CM EnergyPLAN”, a modified version 16.3 of EnergyPLAN is used. On the EnergyPLAN website, you can find studies done using EnergyPLAN, including national and regional studies that can be used for inspiration when using “CM EnergyPLAN” <a href="https://energyplan.eu/case-studies/">https://energyplan.eu/case-studies/</a></p>
+<h2 id="excel-tool-and-connections-with-other-cms">Excel tool and connections with other CMs</h2>
+<p>To assist with using “CM EnergyPLAN” an Excel tool has been developed that helps provide overview of different scenarios you as a user wants to test, as well as provide overview of the results you gain from the different scenarios.</p>
+<p>An overview of the connections with other CMs can be seen in the following figure. These connections are also listed in the description of this CM where applicable. </p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/2a301d33-1312-491e-b9c3-3882a19a8041" /></p>
+<h2 id="input-values-in-the-cm-energyplan-interface">Input values in the CM EnergyPLAN interface</h2>
+<p>In this chapter the inputs of the “CM EnergyPLAN” interface are described. The inputs are divided into three groups: Inputs, Basic inputs and Advanced inputs. </p>
+<h3 id="inputs">Inputs</h3>
+<p>In the Inputs section, different demands, productions, capacities and shares must be set. It is not a requirement to include all options, as options set to zero will not be included. For example, if district heating is not relevant for the given simulation, the “Share of heating demand supplied by district heating” can simply be left at zero. In this section each of the inputs in Inputs is described. 
+Please note, that this tool is a simulation tool that simulates the operation of the system for one year, it does not optimize capacities, and thereby the numbers you as a user needs to provide are the capacities, etc. you want to test in your “what-if” scenario. The data to feed this CM can be found in diverse ways, from institutional statistics to the use of other CMs within the Citiwatts platform. </p>
+<p><em><strong>Wind power capacity installed</strong></em></p>
+<p>Onshore wind power capacity installed in MW. This can either be the current installed capacity in the selected area, or it can be a potential future capacity if you want to simulate a potential future scenario. You can get inspiration from the other “CM – Wind potential” to identify potentials in the given area selected.</p>
+<p><em><strong>PV capacity installed</strong></em></p>
+<p>Photovoltaic (PV) capacity installed in MW-e. This can either be the current installed capacity in the selected / studied area, or it can be a potential future capacity if you want to simulate a potential future scenario. You can get inspiration from the other “CM – Solar thermal and PV potential” to identify potentials in the given area selected.</p>
+<p><em><strong>Inflexible electricity demand</strong></em></p>
+<p>Yearly electricity demand that is expected to be mainly inflexible, in TWh/year. This is typically the current electricity demand excluding electrified heating options and electric vehicles. Examples of such electricity demand can be lighting, televisions, and other electricity demands that are related to lifestyle, but can also be industrial and service sector electricity demands that are not flexible.</p>
+<p><em><strong>Yearly heating demand using individual heat pumps</strong></em></p>
+<p>Share of the end-user heating demand supplied by individual heat pumps. The end-user demand typically includes both space heating demand and hot water consumption, though in cases where air-to-air heat pumps are dominant it would only be the space heating demand. The “CM – DH potential:  economic assessment” can be used as to identify what is relevant for district heating, meaning that the rest would be relevant for individual heating, which thereby can be relevant to what potentials are for individual heating solutions.</p>
+<p><em><strong>Yearly heating demand using direct electric heating</strong></em></p>
+<p>Share of the end-user heating demand supplied by individual direct heating. Direct electric heating is assumed to have an efficiency of 100%. The end-user demand typically includes both space heating demand and hot water consumption. In cases where air-to-air heat pumps are dominant, the hot water consumption in the heat pump heated buildings should be added here. Likewise, for district heating solutions where electric heaters are used for hot water consumption in the buildings, this electricity demand should also be added here on top. The “CM – DH potential:  economic assessment” can be used as to identify what is relevant for district heating, meaning that the rest would be relevant for individual heating, which thereby can be relevant to what potentials are for individual heating solutions.</p>
+<p><em><strong>End-use heating demand supplied by district heating</strong></em></p>
+<p>Share of the end-user heating demand supplied by district heating. This will be the demand excluding the grid loss, meaning the demand at the building level. The end-user demand typically includes both space heating demand and hot water consumption. For district heating solutions where, electric heaters are used for hot water consumption in the buildings, this electricity demand for the hot water consumption should also be added to the “Share of heating demand using direct electric heating”. The “CM – DH potential:  economic assessment” can be used as to identify what is relevant for district heating.</p>
+<p><em><strong>Grid loss for district heating</strong></em></p>
+<p>Grid loss in the district heating grid. The grid loss here is expressed as a percentage of the yearly production of district heating. The default value is 20%. The “CM – DH potential:  economic assessment” can be used as to identify grid loss.</p>
+<p><em><strong>District heating based heat pump electric capacity</strong></em></p>
+<p>Heat pump electric capacity in the district heating systems in MW-e. This can either be the current capacity or a future potential capacity. The “CM – District Heating Supply” can be used to identify relevant capacities of heat pumps for district heating.</p>
+<p><em><strong>Capacity of electric boilers in district heating</strong></em></p>
+<p>Capacity of electric boilers in district heating in MW. These are assumed to have an efficiency of 100%.</p>
+<p>It is important to note that only the electric-driven units are included in the simulations of this CM, and that peak demand supplied by other units than heat pumps and electric boilers are not considered. If you want the peak demand to be supplied by electric boilers, it is recommended that you install sufficient capacity of electric boilers. You can use the following relationships between yearly district heating demand and hourly peak demand for the different countries to estimate peak district heating demand:</p>
+<table>
+<thead>
+<tr>
+<th>Country</th>
+<th>[MW-peak/MWh-year]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AT     </td>
+<td>0.000270          </td>
+</tr>
+<tr>
+<td>BE     </td>
+<td>0.000297          </td>
+</tr>
+<tr>
+<td>BG     </td>
+<td>0.000340          </td>
+</tr>
+<tr>
+<td>CH     </td>
+<td>0.000270          </td>
+</tr>
+<tr>
+<td>CY     </td>
+<td>0.000534          </td>
+</tr>
+<tr>
+<td>CZ     </td>
+<td>0.000278          </td>
+</tr>
+<tr>
+<td>DE     </td>
+<td>0.000296          </td>
+</tr>
+<tr>
+<td>DK     </td>
+<td>0.000250          </td>
+</tr>
+<tr>
+<td>EE     </td>
+<td>0.000260          </td>
+</tr>
+<tr>
+<td>ES     </td>
+<td>0.000367          </td>
+</tr>
+<tr>
+<td>FI     </td>
+<td>0.000282          </td>
+</tr>
+<tr>
+<td>FR     </td>
+<td>0.000292          </td>
+</tr>
+<tr>
+<td>GR     </td>
+<td>0.000580          </td>
+</tr>
+<tr>
+<td>HR     </td>
+<td>0.000370          </td>
+</tr>
+<tr>
+<td>HU     </td>
+<td>0.000314          </td>
+</tr>
+<tr>
+<td>IE     </td>
+<td>0.000266          </td>
+</tr>
+<tr>
+<td>IT     </td>
+<td>0.000346          </td>
+</tr>
+<tr>
+<td>LT     </td>
+<td>0.000293          </td>
+</tr>
+<tr>
+<td>LU     </td>
+<td>0.000343          </td>
+</tr>
+<tr>
+<td>LV     </td>
+<td>0.000283          </td>
+</tr>
+<tr>
+<td>MT     </td>
+<td>0.000492          </td>
+</tr>
+<tr>
+<td>NL     </td>
+<td>0.000293          </td>
+</tr>
+<tr>
+<td>PL     </td>
+<td>0.000277          </td>
+</tr>
+<tr>
+<td>PT     </td>
+<td>0.000362          </td>
+</tr>
+<tr>
+<td>RO     </td>
+<td>0.000365          </td>
+</tr>
+<tr>
+<td>SE     </td>
+<td>0.000240          </td>
+</tr>
+<tr>
+<td>SI     </td>
+<td>0.000304          </td>
+</tr>
+<tr>
+<td>SK     </td>
+<td>0.000305          </td>
+</tr>
+<tr>
+<td>UK     </td>
+<td>0.000270          </td>
+</tr>
+</tbody>
+</table>
+<p>So e.g. if you have a model for a part of Austria with a district heating demand of 1 000 000 MWh/year (1 000 GWh/year), then the peak demand would be 270 MW (0.000270 * 1 000 000).</p>
+<p><em><strong>Share of district heating from non-electric units</strong></em></p>
+<p>As other district heating supply technologies than heat pumps and electric boilers might be in use in the district heating systems, it is here possible to add a share of the yearly supply that is supplied by these units. Such units could be waste incineration, biomass-fired combined heat and power plants or excess heat from industrial processes. The tool includes these by adding a production from these units as group before using the option of heat pumps or electric boilers for every hour. Meaning that the larger the share is of these, the less possibility for flexibility there is in the district heating system. The default value is 50%, meaning by default half of the district heating supply will be from non-electric units. If only heat pumps and electric boilers are used the share should be set to 0%. </p>
+<p>It is possible to define how this share should be understood hour by hour by choosing a distribution in the Inputs section. Using “Standard” distribution means that the production of the non-electric units is simply divided equally out in each hour of the simulated year. The “CM – District Heating Supply” can be used to identify how much heating is expected to be supplied from non-electric units.</p>
+<p><em><strong>District heating storage capacity</strong></em></p>
+<p>Heat storage capacity in the district heating system, in average days of storage. An average day is here based on district heating production on an average day, which is found based on the yearly district heating production. So, for example, if “End-use heating demand supplied by district heating” is 10 GWh/year and the “Grid loss for district heating” is 20%, then the yearly district heating production would be 12.5 GWh meaning an average day would have a demand of 34.15 MWh (12.5 GWh per year / 365 days = 34.15 MWh/day). If the district heating storage capacity should be 3 days of storage that would then equal 102.45 MWh.</p>
+<p><em><strong>Number of EVs</strong></em></p>
+<p>Total number of electric vehicles.  Estimates for this can be found via “CM – EV Density”.</p>
+<p><em><strong>Share of EVs that can flexibly charge</strong></em></p>
+<p>Percentage of the electric vehicles that are expected to be able to charge flexible depending on the needs of the energy system (e.g. by responding to price signals), while still allowing the users to be able to use their vehicle when needed. Default value is 100%, where all electric vehicles are assumed to be charged flexible.</p>
+<p><em><strong>Average EVs travelled distance per vehicle per year</strong></em></p>
+<p>Yearly distance driven by each electric vehicle in average, in km/vehicle/year. Default value is 20,000 km/vehicle/year. Here “CM - Electric vehicles charging needs” can be used to identify different expected driving needs.</p>
+<p><em><strong>Average energy consumption per km in the study year</strong></em></p>
+<p>Yearly energy consumption per km by each electric vehicle in average it reflects the efficiency of EVs in terms of their overall energy performance. Default value is 0.2 kWh/km. A similar value is provided when the “CM - Electric vehicles charging needs” is used, though in that CM the number “Electric vehicles electricity consumption” refers to the electricity consumption after losses in the charging of the electric vehicles (see “Charge and Discharge efficiency” in this CM description). The default values in the two CMs are aligned.</p>
+<h3 id="basic-inputs">Basic inputs</h3>
+<p>In the Basic inputs section, it is possible to select distributions for the production and demand used in the simulation. Each distribution covers an entire leap-year on an hourly time resolution. More can be found on this at <a href="https://energyplan.eu">https://energyplan.eu</a>, but here it is relevant to note that the simulations are done hourly for a leap-year using these distributions to divide production and consumption throughout the year. With choosing “Standard” the distribution applied are taken from the European research project sEEnergies (<a href="https://www.seenergies.eu/">https://www.seenergies.eu/</a>) which provides one set of distributions for all EU country (plus UK). For insights on the general principles behind the creation of the distributions please see this publication from EU funded project <a href="https://heatroadmap.eu/wp-content/uploads/2018/09/STRATEGO-WP2-Background-Report-2-Hourly-Distributions-1.pdf">STRATEGO</a></p>
+<p>Using "Country distribution" it is possible to change what country is used for the distributions. If empty the default country is chosen, being the country in which the selected area is located. </p>
+<h3 id="advanced-inputs">Advanced inputs</h3>
+<p>In the Advanced inputs section, more details can be set for the inputs given in the Basic inputs if necessary.</p>
+<p><em><strong>COP value for individual heat pumps</strong></em></p>
+<p>Yearly average coefficient of performance (COP) of the individual heat pumps. The default value is 3. </p>
+<p><em><strong>Capacity limit for individual heat pumps</strong></em></p>
+<p>Capacity limit for the individual heat pumps. The capacity limit tells the simulation at what capacity direct electric heating is used to cover the peaks. The default value is 1, which means that no direct electric heating is used. A capacity limit of 0.8 would mean that the heat pump can cover up to 80% of the yearly peak, with the rest being covered by direct electric heating. </p>
+<p><em><strong>Heat Storage capacity per average day for individual heating solutions</strong></em></p>
+<p>Heat storage capacity for individual heating solutions as a percentage of an average day of heating demand. The average day of demand is calculated based on the yearly heating demands for individual heat pumps and direct electric heating “Yearly heating demand using individual heat pumps” and “Yearly heating demand using direct electric heating”). These are added together to find a yearly total demand for individual heating solutions, and then the average day is found. For example, if each of these have a yearly demand of 100 GWh/year the total would be 200 GWh/year, and the average day would be 0.5 GWh (200/366). Default value is 10%, where it with the example would equal a storage capacity of 0.05 GWh.</p>
+<p><strong><em>Yearly average COP value for district heating heat pumps</em></strong></p>
+<p>Yearly average coefficient of performance (COP) of the heat pumps in district heating systems. The default value is 3. The “CM – District Heating Supply” can be used to identify relevant COP values for the heat pumps for district heating, by in the results of that CM to take the supply of heat from heat pumps and divide it by the electricity consumption of the heat pumps.</p>
+<p><em><strong>Max share of vehicles during peak demand</strong></em></p>
+<p>Maximum share of flexible charged vehicles which are driving during peak demand hour. The default value is 20%.</p>
+<p><em><strong>Share of parked cars connected</strong></em></p>
+<p>Share of parked flexible charged vehicles connected to the grid. The default value is 70%. If using the “CM - Electric vehicles charging needs” also, please note that in that CM the assumption is 100% connection of parked vehicles. </p>
+<p><em><strong>Charge and Discharge efficiency</strong></em></p>
+<p>Charge and discharge efficiency of the electric vehicles. The model is simplified by assuming that the charge and discharge efficiency is the same. Default value is 90%.</p>
+<p><em><strong>Share that can use V2G</strong></em></p>
+<p>Share of electric vehicles that deliver electricity back to the grid (vehicle-to-grid / V2G). Default value is 50%.</p>
+<p><em><strong>Charge capacity per vehicle</strong></em></p>
+<p>Average charge capacity per electric vehicle. The model is simplified by assuming the same discharge capacity per vehicle. Default value is 11 kW/vehicle.</p>
+<p><em><strong>Battery storage capacity per vehicle</strong></em></p>
+<p>Average electric storage capacity per electric vehicle. Default value is 60 kWh/vehicle.</p>
+<p><em><strong>Electricity market prices multiplier</strong></em></p>
+<p>Multiplier for adjusting the hourly electricity market distribution used. The number inserted is multiplied on each value of the distribution. So, if 1 is used then all values in each hour of the year in the distribution are multiplied by 1. By default, 1 is used. If a higher electricity market price is needed on average, then a higher number should be used. </p>
+<p><em><strong>Electricity market prices</strong></em></p>
+<p>Only “Standard” is currently possible here. The market price distribution is for the country in which the area selected is located.  </p>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="outputs-from-cm-energyplan">Outputs from CM EnergyPLAN</h2>
+<p>In the following the outputs from the “CM EnergyPLAN” are described. The focus of the tool lays on flexibility in the electricity system, as such the results are mainly related to the operation of the electricity system. In “Indicators” yearly indicating results can be found. In “Charts” energy balance is shown on monthly basis, as to see how the demands and productions vary throughout the year. Note that even though the results are shown monthly here, the underlaying simulation is by hourly values.</p>
+<p><em><strong>Electricity consumption for heating</strong></em></p>
+<p>Electricity consumption for heating per year in the defined system in GWh/year. This covers both the individual heating supply technologies as well as the ones related to district heating.</p>
+<p><em><strong>Electricity demand peak for heating</strong></em></p>
+<p>The electricity demand for heating in the hour of the year with the highest demand for electricity for heating in MW. This covers both the individual heating supply technologies as well as the ones related to district heating.</p>
+<p><em><strong>Electricity consumption for transport</strong></em></p>
+<p>Electricity consumption for electric vehicles per year in GWh/year. This includes losses related to vehicle-to-grid (V2G) solutions, if that is included in the scenario. </p>
+<p><em><strong>Electricity demand peak for transport</strong></em></p>
+<p>Peak hourly demand for electricity for electric vehicles in the studied year in MW.</p>
+<p><em><strong>Need for electricity import</strong></em></p>
+<p>Yearly import of electricity to the area in GWh/year, or the required power production by thermal power plants, as these are not included in “CM EnergyPLAN”.</p>
+<p><em><strong>Import peak</strong></em></p>
+<p>Peak hourly electricity imports to the area in the studied year in MW, or the needed peak power production by thermal power plants, as these are not included in “CM EnergyPLAN”.</p>
+<p><em><strong>Potential export of electricity</strong></em></p>
+<p>Yearly export of electricity from the area in GWh/year, or electricity useable by other electricity demands not included. “CM EnergyPLAN” will use the technologies defined to utilize as much of the produced electricity from wind power and PV in the given area before it being exported out of the area.</p>
+<p><em><strong>Export peak</strong></em></p>
+<p>Peak hourly electricity export from the area in the studied year in MW. “CM EnergyPLAN” will use the technologies defined to utilize as much of the produced electricity from wind power and PV in the given area before it being exported out of the area.</p>
+<p><em><strong>Charts</strong></em></p>
+<p>In Charts the electricity demands are shown monthly divided into mobility, heating and other. Heating includes both electricity for individual heating solutions as well as electricity for district heating supply. This is shown alongside wind power and PV production monthly. </p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/70b738d5-0687-4f3e-8f5c-6788e326fec9" /></p>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="method">Method</h2>
+<p>In this method description each input parameter of the “CM EnergyPlan” is connected to the corresponding input parameter in the EnergyPLAN input file. This information is not needed to use the CM but is simply to document the connection between the “CM EnergyPLAN” with the EnergyPLAN tool. A modified version 16.3 is used for the "CM EnergyPLAN". The main difference is that here EnergyPLAN will use the electric boilers for peak load and not only to do critical excess electricity production regulation. 
+The inputs to the “CM EnergyPLAN” are presented per category, and they are numbered within the categories as to be able to refer to them throughout the description. First, the “CM EnergyPLAN” title is shown, followed by the connection to EnergyPLAN including the variables that are changed in the EnergyPLAN input file in connection with the input to “CM EnergyPLAN”. </p>
+<h3 id="renewables">Renewables</h3>
+<table>
+<thead>
+<tr>
+<th>“CM EnergyPlan” input parameter    </th>
+<th>Directed input to EnergyPLAN as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wind power capacity installed     </td>
+<td>input_RES1_capacity=            </td>
+</tr>
+<tr>
+<td>PV capacity installed             </td>
+<td>input_RES3_capacity=            </td>
+</tr>
+</tbody>
+</table>
+<h3 id="inflexible-electricity-demand">Inflexible electricity demand</h3>
+<table>
+<thead>
+<tr>
+<th>“CM EnergyPlan” input parameter    </th>
+<th>Directed input to EnergyPLAN as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inflexible electricity demand     </td>
+<td>Input_el_demand_Twh=            </td>
+</tr>
+</tbody>
+</table>
+<h3 id="individual-heating-demand-solutions">Individual heating demand solutions</h3>
+<table>
+<thead>
+<tr>
+<th>“CM EnergyPlan” input parameter    </th>
+<th>Directed input to EnergyPLAN as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yearly heating demand using individual heat pumps     </td>
+<td>input_HH_HP_heat=            </td>
+</tr>
+<tr>
+<td>Yearly heating demand using direct electric heating    </td>
+<td>input_HH_EB_heat=           </td>
+</tr>
+<tr>
+<td><strong>Advanced inputs</strong> - COP value for individual heat pumps </td>
+<td>input_HH_HP_COP=             </td>
+</tr>
+<tr>
+<td><strong>Advanced inputs</strong> - Capacity limit for individual heat pumps</td>
+<td>input_HH_HP_CapLimit=       </td>
+</tr>
+<tr>
+<td><strong>Advanced inputs</strong> - Heat Storage capacity per average day    </td>
+<td>input_HH_EB_storage= and input_HH_HP_storage= </td>
+</tr>
+</tbody>
+</table>
+<h3 id="district-heating">District heating</h3>
+<table>
+<thead>
+<tr>
+<th>“CM EnergyPlan” input parameter    </th>
+<th>Directed input to EnergyPLAN as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>End-use heating demand supplied by district heating     </td>
+<td>input_dh_ann_gr3=    </td>
+</tr>
+<tr>
+<td>Grid loss for district heating    </td>
+<td>input_dh_ann_loss_gr3=  </td>
+</tr>
+<tr>
+<td>Heat pump capacity </td>
+<td>input_cap_hp3_el=</td>
+</tr>
+<tr>
+<td>Capacity of electric boilers in district heating</td>
+<td>input_eh3=</td>
+</tr>
+<tr>
+<td>Share of district heating from non-electric units    </td>
+<td>input_ind_surplus_heat3=  </td>
+</tr>
+<tr>
+<td>District heating storage capacity</td>
+<td>input_storage_gr3_cap=</td>
+</tr>
+<tr>
+<td><strong>Advanced inputs</strong> - Yearly average COP value for district heating heat pumps </td>
+<td>input_eff_hp3_cop= </td>
+</tr>
+</tbody>
+</table>
+<h3 id="electric-mobilitytransportation">Electric mobility/transportation</h3>
+<table>
+<thead>
+<tr>
+<th>“CM EnergyPlan” input parameter    </th>
+<th>Directed input to EnergyPLAN as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of EVs     </td>
+<td><em>(see description below)</em></td>
+</tr>
+<tr>
+<td>Share of EVs that can flexible charge   </td>
+<td><em>(see description below)</em></td>
+</tr>
+<tr>
+<td>Yearly average EVs travelled distance per vehicle per year </td>
+<td><em>(see description below)</em></td>
+</tr>
+<tr>
+<td>Yearly average energy consumption per km</td>
+<td><em>(see description below)</em></td>
+</tr>
+<tr>
+<td><strong>Advanced inputs</strong> – Max share of vehicles during peak demand    </td>
+<td>input_V2G_MaxShare=  </td>
+</tr>
+<tr>
+<td><strong>Advanced inputs</strong> – Share of parked cars connected</td>
+<td>input_V2G_ConnectionShare=</td>
+</tr>
+<tr>
+<td><strong>Advanced inputs</strong> - Yearly average COP value for district heating heat pumps </td>
+<td><em>(see description below)</em></td>
+</tr>
+<tr>
+<td><strong>Advanced inputs</strong> – Share that can use V2G</td>
+<td><em>(see description below)</em></td>
+</tr>
+<tr>
+<td><strong>Advanced inputs</strong> – Charge capacity per vehicle </td>
+<td><em>(see description below)</em></td>
+</tr>
+<tr>
+<td><strong>Advanced inputs</strong> – Battery storage capacity per vehicle</td>
+<td><em>(see description below)</em></td>
+</tr>
+</tbody>
+</table>
+<p>EnergyPLAN needs yearly energy amounts for EVs as inputs (directed input shown in <em>italic</em>). This needs to be split into flexible (<em>input_transport_TWh_V2G=</em>) and non-flexible (<em>input_transport_TWh=</em>) charging EVs. So first the the total energy demand is calculated using the numbers of EVs, the yearly average EVs travelled distance and average energy consumption per km. This total is then split into flexible and non-flexible using the Share of EVs that can flexible charge. </p>
+<p>For flexible charged EVs it is important to know the total charging capacity (<em>input_V2G_Cap_Charge=</em>), so EnergyPLAN knows how much charging can be moved between hours. This is calculated using the number of EVs, the share that can flexible charge and the Charge capacity per vehicle. If V2G (Vehicle-to-grid) is used it is also important to identify what the total discharge capacity (<em>input_V2G_Cap_Inv=</em>) is. This is found using the total charging capacity and the Share that can use V2G. Also important for flexible charging and V2G is the size of EV batteries. EnergyPLAN again needs this in total capacity (<em>input_V2G_Battery=</em>), and to find this number of EVs, the share that can flexible charge and Battery storage capacity per vehicle is used. </p>
+<h3 id="electricity-market-prices">Electricity market prices</h3>
+<table>
+<thead>
+<tr>
+<th>“CM EnergyPlan” input parameter   </th>
+<th>Directed input to EnergyPLAN as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Electricity market prices multiplier</td>
+<td>input_nordpool_mult_fac=</td>
+</tr>
+</tbody>
+</table>
+<h3 id="distributions">Distributions</h3>
+<p>All the hourly distributions used in the CM were settled in the tool with their Standard distribution files for the selected country. All these libraries are a product from the European research project sEEnergies (<a href="https://www.seenergies.eu/">https://www.seenergies.eu/</a>). The included distribution files are direct inputs to EnergyPLAN as shown in the table below. </p>
+<table>
+<thead>
+<tr>
+<th>“CM EnergyPlan” input parameter    </th>
+<th>Directed input to EnergyPLAN as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wind power hourly distribution     </td>
+<td>Filnavn_wave=</td>
+</tr>
+<tr>
+<td>PV hourly distribution   </td>
+<td>Filnavn_pv=</td>
+</tr>
+<tr>
+<td>Inflexible demand distribution </td>
+<td>Filnavn_elbehov=</td>
+</tr>
+<tr>
+<td>District heating demand distribution</td>
+<td>Filnavn_dh=</td>
+</tr>
+<tr>
+<td>Heating demand distribution  </td>
+<td>Filnavn_individual_heatdemand= </td>
+</tr>
+<tr>
+<td>Production of non-electric units distribution</td>
+<td>Filnavn_ind_surplus_heat=</td>
+</tr>
+<tr>
+<td>Driving demand distribution </td>
+<td>Filnavn_transport_V2G=</td>
+</tr>
+<tr>
+<td>Electricity market prices distribution</td>
+<td>Filnavn_prices=</td>
+</tr>
+</tbody>
+</table>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="sample-run">Sample Run</h2>
+<p>In this we will try to try to make three different scenarios for Offenbach am Main in Germany. </p>
+<p>First, we select the area of Offenbach am Main, which opens for us to select “CM EnergyPLAN”.</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/b42ed95b-ead2-4016-9e52-e0ce3f35c34a" /></p>
+<p>The second step is to define a reference scenario that here is supposed to represent the current energy system. The reference scenario is based on energy statistical data from 2022. For simplicity and to show the principles of the CM, we here assume that all electricity is imported in the reference scenario.
+The following energy demands are included:
+* Traditional electricity consumption (incl. industries). We insert this under “Inflexible electricity demand” (0.5 TWh/yr)
+* Electricity consumption for individual heating. Here we assume all is direct electric heating, so we insert this under “Share of heating demand using direct electric heating” (0.009 TWh/yr)
+* District heating production. We insert the end-user demand under “End-user heating demand supplied by district heating” (0.251 TWh/yr). We here assume that all district heating is supply by non-electric driven units and therefore set “Share of district heating from non-electric units” to 100%. 
+* Electricity consumption for transport. We assume that 6200 EVs are in the area, so we insert this under “Number of EVs.</p>
+<p>We keep the rest as default values. We then run the CM and se the following:</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/de9ddf0b-e9ec-489d-b943-ff9bd9a1fba9" /></p>
+<p>After seeing how the system is behaving, we can try to add different technologies to see how that affects the results. We will try two different scenarios. </p>
+<p><strong>Scenario 1 – Adding Wind and PV</strong></p>
+<p>This scenario adds wind power and PV to the electricity production. The following capacities were identified using other CMs to calculate potential in the area, and are added to the reference model:
+* Wind power: 48 MW (Wind power capacity installed)
+* PV: 57 MW (PV capacity installed)</p>
+<p>We then run the CM and get the following results. </p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/ef18fcd6-aef7-4c06-9545-24f652aed95a" />
+<img alt="image" src="https://github.com/user-attachments/assets/5e2c7ad7-dee2-4319-ad79-22073480eae4" /></p>
+<p>So interestingly the electricity production from these capacities of wind power and PV only partially covers the demand. With PV contributing mostly in the summer, and wind power mostly in the winter. This indicates that significant more PV and wind power capacity is needed if we want to supply to the local demands and might mean that surrounding areas are needed to supply electricity to this area. Also interestingly is that the EV charging peak increased from 7 MW in the reference scenario to 30 MW in this scenario. This is done as EnergyPLAN identified the possibility to utilize more local renewables by charging the EVs more flexible. More on the working on EnergyPLAN can be found here: <a href="https://energyplan.eu/about-energyplan/">https://energyplan.eu/about-energyplan/</a></p>
+<p><strong>Scenario 2 – Electric Heat Pumps for DH</strong></p>
+<p>We will then try to change the district heating supply. We want to investigate what happens if the district heating supply is changed to only using electric heat pumps. We build this on Scenario 1, meaning that wind power and PV capacities remain the same as in Scenario 1.
+We are making the following changes:
+-   Heat pump electric capacity: From 0 MW to 30 MW
+-   Share of DH from non-electric units: From 100% to 0%</p>
+<p>We then run the CM and get the following results. </p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/fd43bec7-fe5b-4ec1-b2dc-feb5e0312eb3" />
+<img alt="image" src="https://github.com/user-attachments/assets/2f0bc084-092d-49cf-85cc-89f7182cbb6e" /></p>
+<p>So, we see that changing the district heating supply to heat pumps especially increases the electricity demand in the winter months. The peak for EV charging goes back down to 7 MW as in the reference scenario, as the heat pumps for district heating now are the preferred flexibility option of EnergyPLAN, that it uses to utilize as much locally produced electricity as possible. </p>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://energyplan.eu/">https://energyplan.eu/</a> </li>
+<li><a href="https://energyplan.eu/case-studies/">https://energyplan.eu/case-studies/</a> </li>
+<li><a href="https://doi.org/10.1016/j.segy.2021.100007">https://doi.org/10.1016/j.segy.2021.100007</a></li>
+<li><a href="https://www.seenergies.eu/">https://www.seenergies.eu/</a></li>
+<li><a href="https://heatroadmap.eu/wp-content/uploads/2018/09/STRATEGO-WP2-Background-Report-2-Hourly-Distributions-1.pdf">https://heatroadmap.eu/wp-content/uploads/2018/09/STRATEGO-WP2-Background-Report-2-Hourly-Distributions-1.pdf</a> </li>
+<li><a href="https://energyplan.eu/case-studies/heat-roadmap-europe-4-hre4/">https://energyplan.eu/case-studies/heat-roadmap-europe-4-hre4/</a> </li>
+<li><a href="https://doi.org/10.1016/j.rser.2022.112777">https://doi.org/10.1016/j.rser.2022.112777</a></li>
+</ul>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+<h2 id="how-to-cite">How To Cite</h2>
+<p>Peter Sorknæs, Alisson Aparecido Vitoriano Julio and Aksel Bang, in citiwatts Wiki, EnergyPLAN CM Page (August/September 2025)</p>
+<h2 id="authors-and-reviewers">Authors And Reviewers</h2>
+<p>Peter Sorknæs, Alisson Aparecido Vitoriano Julio and Aksel Bang, Aalborg University</p>
+<h2 id="license">License</h2>
+<p>Copyright © 2022-2025: OpenGIS4ET / citiwatts team</p>
+<p>Creative Commons Attribution 4.0 International License</p>
+<p>This work is licensed under a Creative Commons CC BY 4.0 International License.</p>
+<p>SPDX-License-Identifier: CC-BY-4.0</p>
+<p>License-Text: <a href="https://spdx.org/licenses/CC-BY-4.0.html">https://spdx.org/licenses/CC-BY-4.0.html</a></p>
+<h2 id="acknowledgement">Acknowledgement</h2>
+<p>The project “Open Geographic Information System for Energy Transition” (OpenGIS4ET, Project Number 111 786) has been supported by partners of the <a href="https://www.eranet-smartenergysystems.eu/">ERA-Net Smart Energy Systems</a> and <a href="https://mission-innovation.net/">Mission Innovation</a> through the Joint Call 2020. As such, this project has received funding from the</p>
+<ul>
+<li>
+<p>Energy Technology Development and Demonstration (EUDP), Denmark (Project No.: 64021-6026), </p>
+</li>
+<li>
+<p>Federal Ministry for Economic Affairs and Climate Action, Germany (Project No.: 03EI4050B), </p>
+</li>
+<li>
+<p>The Austrian Research Promotion Agency (FFG), Austria (Project No.: 889031), </p>
+</li>
+<li>
+<p>Swiss Federal Office of Energy (SFOE), Switzerland (Project No.: 502364).</p>
+</li>
+</ul>
+<p>The OpenGIS4ET project builts on the H2020 <a href="https://www.hotmaps-project.eu/">Hotmaps Project</a>.</p>
+<p>For more details please refer to the <a href="https://citiwatts.github.io/wiki/about-the-citiwatts-toolbox/">About page of this wiki</a>.</p>
+<h2 id="disclaimers">Disclaimers</h2>
+<p>The content and views expressed in this material are those of the authors and do not necessarily reflect the views or opinion of the ERA-Net SES initiative. Any reference given does not necessarily imply the endorsement by ERA-Net SES.</p>
+<p>The citiwatts toolbox is a living platform: As the research project as well as its sister and follow-up projects evolve, (new) functionalities are refined and bugs are addressed and solved. The toolbox is hosted in two environments: the development server and the production server. The development server has the most up-to-date version, with most of issues and bugs solved, but it might be unstable as developers keep working on it daily. The production server instead is a stable environment.</p>
+<p><strong><a href="#top">Go To Top</a></strong></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../mobility-cm-electric-vehicles-charging-needs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mobility CM: Electric Vehicles Charging Needs">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Mobility CM: Electric Vehicles Charging Needs
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../learning-toolchain-approach/" class="md-footer__link md-footer__link--next" aria-label="Next: The Toolchain Approach: Conducting Scenario Assessments in the citiwatts platform">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                The Toolchain Approach: Conducting Scenario Assessments in the citiwatts platform
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/citiwatts/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
